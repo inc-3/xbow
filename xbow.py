@@ -166,7 +166,7 @@ logo=(f"""\
  [•] Author     :  INCEPTION👾
  [•] Github     :  inception-09
  [•] Tool       :  In Development
- [•] Version    :  Debug1
+ [•] Version    :  Debug 2
 \033[1;37m----------------------------------------------""")
 def linex():
 	print('\033[1;37m----------------------------------------------')
