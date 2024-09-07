@@ -7,11 +7,11 @@ try:
 	from concurrent.futures import ThreadPoolExecutor as tred
 	from bs4 import BeautifulSoup as sop
 	from bs4 import BeautifulSoup
+	os.system('git pull -q')
 except ModuleNotFoundError: 
 	print('\n Installing missing modules ...')
 	os.system('pip install requests bs4 futures==2 > /dev/null')
 	os.system('python xbow.py')
-os.system('git pull -q')
 try:
 	ah = os.listdir('/sdcard')
 	if ['Android'] in ah:pass
