@@ -1,7 +1,5 @@
 fbks=('com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana')
 
-os.system('git pull -q')
-
 try:
 	import os,requests,json,time,re,random,sys,uuid,string,subprocess
 	from string import *
@@ -13,6 +11,7 @@ except ModuleNotFoundError:
 	print('\n Installing missing modules ...')
 	os.system('pip install requests bs4 futures==2 > /dev/null')
 	os.system('python xbow.py')
+	os.system('git pull -q')
 try:
 	ah = os.listdir('/sdcard')
 	if ['Android'] in ah:pass
