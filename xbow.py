@@ -294,7 +294,7 @@ def menu():
 			elif xd in ['2','02']:
 				pak()
 			elif xd in ['3','03']:
-				os.system('xdg-open https://chat.whatsapp.com/E9qcXs9EcwE7JAXW2l2hR3')
+				os.system('xdg-open https://chat.whatsapp.com/')
 				menu()
 			elif xd in ['0','00']:
 				exit(' Thanks for use 🥰 ')
