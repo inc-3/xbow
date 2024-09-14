@@ -153,6 +153,7 @@ def useragent():
     CRACK_ua = f'[FBAN/FB4A;FBAV/{fbav};FBBV/{fbbv};FBDM/{{density=3.0,width=1280,height=1440}};FBLC/{lc};FBRV/0;FBCR/{cr};FBMF/Xiaomi;FBBD/Xiaomi;FBPN/com.facebook.katana;FBDV/{gtt};FBSV/{android_version};FBOP/19;FBCA/armeabi-v7a:armeabi;]'
     return CRACK_ua
 
+#M2 UA
 def uaa():
     return "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/61.0.0.15.69;FBBV/20748118;FBDM/{density=3.9,width=1080,height=1920};FBLC/lt_LT;FBCR/Red Pocket Mobile;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SPH-L720;FBSV/5.0.1;nullFBCA/armeabi-v7a:armeabi;]"
 
