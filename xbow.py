@@ -268,7 +268,7 @@ def menu():
 				print(' [1] Method M1 \n [2] Method M2 \n [3] Method M3')
 				linex()
 				mth = input(' Choose : ')
-				with tred(max_workers=60) as crack_submit:
+				with tred(max_workers=90) as crack_submit:
 					clear()
 					total_ids = str(len(fo))
 					print(' Total account ids : \033[1;32m'+total_ids+f' ')
