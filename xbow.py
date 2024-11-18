@@ -156,7 +156,7 @@ def useragent():
 
 #M2 UA
 def uaa():
-    return "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/61.0.0.15.69;FBBV/20748118;FBDM/{density=3.9,width=1080,height=1920};FBLC/lt_LT;FBCR/Red Pocket Mobile;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SPH-L720;FBSV/5.0.1;nullFBCA/armeabi-v7a:armeabi;]"
+    return "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/61.0.0.15.69;FBBV/20748118;FBDM/{density=3.9,width=1080,height=1920};FBLC/lt_LT;FBCR/GRAMMENPHONE;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SPH-L720;FBSV/5.0.1;nullFBCA/armeabi-v7a:armeabi;]"
 
 logo=(f"""\
  __  __     ____   _____        __
@@ -268,7 +268,7 @@ def menu():
 				print(' [1] Method M1 \n [2] Method M2 \n [3] Method M3')
 				linex()
 				mth = input(' Choose : ')
-				with tred(max_workers=30) as crack_submit:
+				with tred(max_workers=60) as crack_submit:
 					clear()
 					total_ids = str(len(fo))
 					print(' Total account ids : \033[1;32m'+total_ids+f' ')
