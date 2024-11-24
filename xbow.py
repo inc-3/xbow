@@ -85,7 +85,7 @@ def S1():
 	fbap = random.choice(['414.0.0.30.113','398.0.0.21.105','274.0.0.22.117','316.4.0.15.120','385.0.0.32.114','415.0.0.34.107','414.0.0.30.113','357.0.0.13.112','415.0.0.34.107','408.1.0.16.113','412.0.0.22.115','240.0.0.38.121','414.0.0.30.113','241.0.0.43.15'])
 	fbcr = "random.choice(['o2 - de', 'Verizon - us', 'Vodafone - uk','null','en_GB','en_US','en_PK','IND airtel','Nepal Telecom'])}"
 	s = "[FBAN/FB4A;FBAV/"+str(random.randint(111,999))+'.0.0.'+str(random.randrange(9,99))+str(random.randint(111,999)) +";FBBV/"+str(random.randint(111111111,999999999))
-	e = '[FBAN/FB4A;FBAV/65.0.0.42.81;FBBV/23239543;FBDM/{density=3.0,width=1080,height=1920};FBLC/pl_PL;FBCR/Nokia;FBMF/Xiaomi;FBBD/xiaomi;FBPN/com.facebook.katana;FBDV/Redmi Note 4;FBSV/7.0;nullFBCA/armeabi-v7a:armeabi;]'
+	e = '[FBAN/FB4A;FBAV/411.0.0.53.147;FBBV/975203;FBDM/{density=2.0,width=1200,height=1824};FBLC/en_US;FBRV/55873232;FBCR/Banglalink;FBMF/Realme;FBBD/Realme;FBPN/com.facebook.katana;FBDV/RMX2117;FBSV/9.0.0;FBOP/19;FBCA/arm64-v8a:null;]'
 	ua = s + e
 	#print(ua)
 	return ua 
@@ -101,13 +101,13 @@ def S2():
 	fbap = random.choice(['414.0.0.30.113','398.0.0.21.105','274.0.0.22.117','316.4.0.15.120','385.0.0.32.114','415.0.0.34.107','414.0.0.30.113','357.0.0.13.112','415.0.0.34.107','408.1.0.16.113','412.0.0.22.115','240.0.0.38.121','414.0.0.30.113','241.0.0.43.15'])
 	fbcr = "random.choice(['o2 - de', 'Verizon - us', 'Vodafone - uk','null','en_GB','en_US','en_PK','IND airtel','Nepal Telecom'])}"
 	s = "[FBAN/FB4A;FBAV/"+str(random.randint(111,999))+'.0.0.'+str(random.randrange(9,99))+str(random.randint(111,999)) +";FBBV/"+str(random.randint(111111111,999999999))
-	e = '[FBAN/FB4A;FBAV/189.0.0.45.140;FBBV/3098847;FBDM/{density=2.0,width=720,height=1184};FBLC/en_US;FBRV/3098847;FBCR/GRAMEENPHONE;FBMF/Infinix;FBBD/Infinix;FBPN/com.facebook.katana;FBDV/Infinix X693;FBSV/9.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]' 
+	e = '[FBAN/FB4A;FBAV/81.0.0.6.159;FBBV/796275293;FBDM/{density=1.0,width=1280,height=800};FBLC/en_US;FBRV/796275293;FBCR/Grameenphone;FBMF/TECNO;FBBD/TECNO;FBPN/com.facebook.katana;FBDV/TECNO KH7;FBSV/6.0.0;FBOP/19;FBCA/x86:armeabi-v7a;]' 
 	ua = s + e
 	#print(ua)
 	return ua 
 
 #__________________[ SYS ]__________________#
-os.system('xdg-open https://www.facebook.com/MR.xbow.404')
+os.system('git pull')
 sys.stdout.write('\x1b]2; xbow-XD\x07')
 head = {'Host': 'adsmanager.facebook.com', 'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"', 'viewport-width': '980'}
 #__________________[ COLOUR ]__________________#
