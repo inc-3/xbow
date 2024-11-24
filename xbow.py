@@ -280,7 +280,7 @@ class main_crack():
                     oks.append(sid)
                     break
                 elif 'www.facebook.com' in q['error']['message']:
-                     ##print(f"\r\r{black}[xbow-CP] • {sid} - {ps} ")
+                     print(f"\r\r{black}[xbow-CP] • {sid} - {ps} ")
                      open('/sdcard/xbow--CP.txt','a').write(sid+'|'+ps+'\n')
                      cps.append(sid)
                 else:
@@ -347,7 +347,7 @@ class main_crack():
                     oks.append(sid)
                     break
                 elif 'www.facebook.com' in q['error']['message']:
-                    ##print(f"\r\r{black}[xbow-CP] • {sid} - {ps} ")
+                    print(f"\r\r{black}[xbow-CP] • {sid} - {ps} ")
                     open('/sdcard/xbow-CP.txt','a').write(sid+'|'+ps+'\n')
                     cps.append(sid)
                 else:
