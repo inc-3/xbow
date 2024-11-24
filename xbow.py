@@ -101,7 +101,7 @@ def S2():
 	fbap = random.choice(['414.0.0.30.113','398.0.0.21.105','274.0.0.22.117','316.4.0.15.120','385.0.0.32.114','415.0.0.34.107','414.0.0.30.113','357.0.0.13.112','415.0.0.34.107','408.1.0.16.113','412.0.0.22.115','240.0.0.38.121','414.0.0.30.113','241.0.0.43.15'])
 	fbcr = "random.choice(['o2 - de', 'Verizon - us', 'Vodafone - uk','null','en_GB','en_US','en_PK','IND airtel','Nepal Telecom'])}"
 	s = "[FBAN/FB4A;FBAV/"+str(random.randint(111,999))+'.0.0.'+str(random.randrange(9,99))+str(random.randint(111,999)) +";FBBV/"+str(random.randint(111111111,999999999))
-	e = '[FBAN/FB4A;FBAV/189.0.0.45.140;FBBV/3098847;FBDM/{density=2.0,width=720,height=1184};FBLC/en_US;FBRV/3098847;FBCR/GRAMMENPHONE;FBMF/Infinix;FBBD/Infinix;FBPN/com.facebook.katana;FBDV/Infinix X693;FBSV/9.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]' 
+	e = '[FBAN/FB4A;FBAV/189.0.0.45.140;FBBV/3098847;FBDM/{density=2.0,width=720,height=1184};FBLC/en_US;FBRV/3098847;FBCR/GRAMEENPHONE;FBMF/Infinix;FBBD/Infinix;FBPN/com.facebook.katana;FBDV/Infinix X693;FBSV/9.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]' 
 	ua = s + e
 	#print(ua)
 	return ua 
