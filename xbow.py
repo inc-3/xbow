@@ -101,7 +101,7 @@ def S2():
 	fbap = random.choice(['414.0.0.30.113','398.0.0.21.105','274.0.0.22.117','316.4.0.15.120','385.0.0.32.114','415.0.0.34.107','414.0.0.30.113','357.0.0.13.112','415.0.0.34.107','408.1.0.16.113','412.0.0.22.115','240.0.0.38.121','414.0.0.30.113','241.0.0.43.15'])
 	fbcr = "random.choice(['o2 - de', 'Verizon - us', 'Vodafone - uk','null','en_GB','en_US','en_PK','IND airtel','Nepal Telecom'])}"
 	s = "[FBAN/FB4A;FBAV/"+str(random.randint(111,999))+'.0.0.'+str(random.randrange(9,99))+str(random.randint(111,999)) +";FBBV/"+str(random.randint(111111111,999999999))
-	e = '[FBAN/FB4A;FBAV/458.0.0.10.246;FBBV/420455601;FBDM/{density=3.0,width=1080,height=2340};FBLC/en_US;FBRV/57405534;FBCR/Grameenphone;FBMF/OPPO;FBBD/OPPO;FBPN/com.facebook.katana;FBDV/CPH8893;FBSV/7.0.0;FBOP/1;FBCA/arm64-v8a:;]' 
+	e = '[FBAN/FB4A;FBAV/437.0.0.21.157;FBBV/22175042;FBDM/{density=1.3312501,width=800,height=1280};FBLC/en_US;FBRV/355870837;FBCR/Grameenphone;FBMF/Realme;FBBD/Realme;FBPN/com.facebook.katana;FBDV/RMX3269;FBSV/9.0.1;FBOP/19;FBCA/arm64-v8a:;]' 
 	ua = s + e
 	#print(ua)
 	return ua 
