@@ -101,9 +101,8 @@ def S2():
 	fbap = random.choice(['414.0.0.30.113','398.0.0.21.105','274.0.0.22.117','316.4.0.15.120','385.0.0.32.114','415.0.0.34.107','414.0.0.30.113','357.0.0.13.112','415.0.0.34.107','408.1.0.16.113','412.0.0.22.115','240.0.0.38.121','414.0.0.30.113','241.0.0.43.15'])
 	fbcr = "random.choice(['o2 - de', 'Verizon - us', 'Vodafone - uk','null','en_GB','en_US','en_PK','IND airtel','Nepal Telecom'])}"
 	s = "[FBAN/FB4A;FBAV/"+str(random.randint(111,999))+'.0.0.'+str(random.randrange(9,99))+str(random.randint(111,999)) +";FBBV/"+str(random.randint(111111111,999999999))
-	e = '[FBAN/FB4A;FBAV/81.0.0.6.159;FBBV/796275293;FBDM/{density=1.0,width=1280,height=800};FBLC/en_US;FBRV/796275293;FBCR/Grameenphone;FBMF/TECNO;FBBD/TECNO;FBPN/com.facebook.katana;FBDV/TECNO KH7;FBSV/6.0.0;FBOP/19;FBCA/x86:armeabi-v7a;]'
-	sm = '[FBAN/FB4A;FBAV/305.0.0.51.122;FBBV/167456783;FBDM/{density=4.0,width=1440,height=3040};FBLC/en_US;FBRV/145985793;FBCR/Robi;FBMF/Samsung;FBBD/Samsung Galaxy S22 Ultra;FBPN/com.facebook.katana;FBDV/SM-S908U;FBSV/arm64-v8a:armeabi-v7l;Mozilla/5.0 (Linux; Android 12; S22 Ultra) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36]'
-	ua = e
+	e = '[FBAN/FB4A;FBAV/225.0.0.49.250;FBBV/805213039;FBDM/{density=2.75,width=720,height=1600};FBLC/en_US;FBRV/805213039;FBCR/Bkash;FBMF/Infinix;FBBD/Infinix;FBPN/com.facebook.katana;FBDV/Infinix X665C;FBSV/8.0.0;FBOP/1;FBCA/x86:armeabi-v7a;]'
+	ua = s + e
 	#print(ua)
 	return ua 
 
