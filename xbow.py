@@ -101,7 +101,7 @@ def S2():
 	fbap = random.choice(['414.0.0.30.113','398.0.0.21.105','274.0.0.22.117','316.4.0.15.120','385.0.0.32.114','415.0.0.34.107','414.0.0.30.113','357.0.0.13.112','415.0.0.34.107','408.1.0.16.113','412.0.0.22.115','240.0.0.38.121','414.0.0.30.113','241.0.0.43.15'])
 	fbcr = "random.choice(['o2 - de', 'Verizon - us', 'Vodafone - uk','null','en_GB','en_US','en_PK','IND airtel','Nepal Telecom'])}"
 	s = "[FBAN/FB4A;FBAV/"+str(random.randint(111,999))+'.0.0.'+str(random.randrange(9,99))+str(random.randint(111,999)) +";FBBV/"+str(random.randint(111111111,999999999))
-	e = '[[FBAN/FB4A;FBAV/320.0.0.48.117;FBBV/900201245;FBDM/{density=2.75,width=1080,height=2400};FBLC/en_US;FBRV/900201245;FBCR/Grameenphone;FBMF/Xiaomi;FBBD/Xiaomi;FBPN/com.facebook.katana;FBDV/M2101K7AG;FBSV/12.0.0;FBOP/1;FBCA/arm64-v8a:armeabi-v7a;]'
+	e = '[FBAN/FB4A;FBAV/315.0.0.42.122;FBBV/960213045;FBDM/{density=2.8,width=720,height=1520};FBLC/fr_FR;FBRV/960213045;FBCR/Grameenphone;FBMF/Huawei;FBBD/Huawei;FBPN/com.facebook.katana;FBDV/P30 Lite;FBSV/10.0.0;FBOP/1;FBCA/arm64-v8a:armeabi-v7a;]'
 	ua = s + e
 	#print(ua)
 	return ua 
