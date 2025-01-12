@@ -354,7 +354,7 @@ class main_crack():
                     continue
             loop+=1
         except requests.exceptions.ConnectionError:
-            time.sleep(20)
+            time.sleep(10)
             self.methodC(sid, name, ps) 
             
 #__________________[ PASSWORD ]__________________#
