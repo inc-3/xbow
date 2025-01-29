@@ -85,7 +85,7 @@ def S1():
 	fbap = random.choice(['414.0.0.30.113','398.0.0.21.105','274.0.0.22.117','316.4.0.15.120','385.0.0.32.114','415.0.0.34.107','414.0.0.30.113','357.0.0.13.112','415.0.0.34.107','408.1.0.16.113','412.0.0.22.115','240.0.0.38.121','414.0.0.30.113','241.0.0.43.15'])
 	fbcr = "random.choice(['o2 - de', 'Verizon - us', 'Vodafone - uk','null','en_GB','en_US','en_PK','IND airtel','Nepal Telecom'])}"
 	s = "[FBAN/FB4A;FBAV/"+str(random.randint(111,999))+'.0.0.'+str(random.randrange(9,99))+str(random.randint(111,999)) +";FBBV/"+str(random.randint(111111111,999999999))
-	e = '[Dalvik/2.1.0 (Linux; U; Android 12; vivo 1938 Build/SP1A.210812.003) [FBAN/Orca-Android;FBAV/439.0.0.29.119;FBPN/com.facebook.orca;FBLC/en_US;FBBV/548243062;FBCR/Robi;FBMF/vivo;FBBD/vivo;FBDV/vivo 1938;FBSV/12;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1411};FB_FW/1;]'
+	e = '[Dalvik/2.1.0 (Linux; U; Android 12; vivo 1938 Build/SP1A.210812.003) [FBAN/Orca-Android;FBAV/439.0.0.29.119;FBPN/com.facebook.orca;FBLC/en_US;FBBV/548243062;FBCR/Grameenphone;FBMF/vivo;FBBD/vivo;FBDV/vivo 1938;FBSV/12;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1411};FB_FW/1;]'
 	ua = e
 	#print(ua)
 	return ua 
