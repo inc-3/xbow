@@ -3,7 +3,7 @@ import os,zlib
 from os import system as osRUB
 from os import system as cmd
 os.system('clear')
-print(f'\x1b[38;5;46m[\x1b[38;5;160m◆\x1b[38;5;46m] INSTALL MODEL WAITING.... ') 
+print(f'\x1b[38;5;46m[\x1b[38;5;160m◆\x1b[38;5;46m] Loading Module's.... ') 
 try:
     import requests,certifi,rich, pycurl 
 except:
@@ -134,13 +134,15 @@ looood("")
 def linex():print(f'{white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ')
 #__________________[ LOGO. ..]__________________#
 logo =f"""
-{green}▞▀▖▛▀▖▙ ▌▞▀▖▙ ▌  ▞▀▖▌ ▌▙▗▌▛▀▘▛▀▖
-{green}▙▄▌▌ ▌▌▌▌▙▄▌▌▌▌  ▙▄▌▙▄▌▌▘▌▙▄▖▌ ▌
-{green}▌ ▌▌ ▌▌▝▌▌ ▌▌▝▌  ▌ ▌▌ ▌▌ ▌▌  ▌ ▌
+{green}X   X BBBB   OOO  W     W
+{green} X X  B   B O   O W     W
+{green}  X   BBBB  O   O W  W  W
+{green} X X  B   B O   O  W W W
+{green}X   X BBBB   OOO    W W
 {green}▘ ▘▀▀ ▘ ▘▘ ▘▘ ▘  ▘ ▘▘ ▘▘ ▘▀▀▘▀▀  {white}V{green}/{white}6.6
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {rad}[{white}◆{rad}] {green}FACEBOOK  {white} 
-{rad}[{white}◆{rad}] {green}TOOLTYPE  {white}➣{green}  FREE{white}{rad}┼{faltu}{rad}FILE & RANDOM{pvt}{green}{rad}┼ 
+{rad}[{white}◆{rad}] {green}TOOL  {white}➣{green}  FREE{white}{rad}┼{faltu}{rad}FILE Cloning{pvt}{green}{rad}┼ 
 {rad}[{white}◆{rad}] {green}GITHUB    {white}➣{white}   ({gren}xbow-570{white})
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
 #__________________[ RESULT ]__________________#
@@ -158,9 +160,8 @@ def result(OKs,cps):
 def menu():   
     clear()
     print(f'{rad}[{white}1{rad}] {green}START FILE CLONE')
-    print(f'{rad}[{white}2{rad}] {green}START RANDOM CLONE  {rad}({white}COMMING SOON{rad})')
-    print(f'{rad}[{white}3{rad}] {green}JOIN WHATSAPP GROUPE')
-    print(f'{rad}[{white}4{rad}] {green}CONTAC TOOL ADMIN')
+    print(f'{rad}[{white}3{rad}] {green}JOIN WHATSAPP GROUP')
+    print(f'{rad}[{white}4{rad}] {green}CONTACT TOOL ADMIN')
     print(f'{rad}[{white}0{rad}] {gren}EXIT MENU  ')
     linex()
     select = input(f'{rad}[{white}◆{rad}] {green}CHOICE OPTION {white}➣{green} ')
