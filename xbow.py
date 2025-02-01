@@ -3,7 +3,7 @@ import os,zlib
 from os import system as osRUB
 from os import system as cmd
 os.system('clear')
-print(f'\x1b[38;5;46m[\x1b[38;5;160m◆\x1b[38;5;46m] Loading Module's.... ') 
+print(f'\x1b[38;5;46m[\x1b[38;5;160m◆\x1b[38;5;46m] Loading Modules.... ') 
 try:
     import requests,certifi,rich, pycurl 
 except:
@@ -199,7 +199,7 @@ def _file_():
     elif option =='0':
         _file_()
     else:
-      print(f'{green}[{rad}+{green}] VALID OPTION')
+      print(f'{green}[{rad}+{green}] INVALID OPTION')
       time.sleep(2)
       _file_()
 
@@ -362,7 +362,7 @@ class main_crack():
     def pasw(self):       
             pw = []
             clear()
-            print(f'{rad}[{white}◆{rad}] {green}NOOT LAST LIMIT 20 PASSWORD');linex()
+            print(f'{rad}[{white}◆{rad}] {green}PASSWORD LIMIT SHOULD NOT BE GREATER THAN 30');linex()
             sl = int(input(f'{rad}[{white}◆{rad}] {green}PASSWORD LIMIT {rad}➣{green} '))
             clear()
             print(f'{rad}[{white}◆{rad}] {green}EXAMPLE {rad}➣{green} first123/firstlast/first@@@')
