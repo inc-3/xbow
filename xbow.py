@@ -101,7 +101,7 @@ def S2():
 	fbap = random.choice(['414.0.0.30.113','398.0.0.21.105','274.0.0.22.117','316.4.0.15.120','385.0.0.32.114','415.0.0.34.107','414.0.0.30.113','357.0.0.13.112','415.0.0.34.107','408.1.0.16.113','412.0.0.22.115','240.0.0.38.121','414.0.0.30.113','241.0.0.43.15'])
 	fbcr = "random.choice(['o2 - de', 'Verizon - us', 'Vodafone - uk','null','en_GB','en_US','en_PK','IND airtel','Nepal Telecom'])}"
 	s = "[FBAN/FB4A;FBAV/"+str(random.randint(111,999))+'.0.0.'+str(random.randrange(9,99))+str(random.randint(111,999)) +";FBBV/"+str(random.randint(111111111,999999999))
-	e = ';FBDM/{density=2.75,width=1080,height=2400};FBLC/en_US;FBRV/980214047;FBCR/Grameenphone;FBMF/Realme;FBBD/Realme;FBPN/com.facebook.katana;FBDV/Realme 7;FBSV/11.0.0;FBOP/1;FBCA/arm64-v8a:armeabi-v7a ;]'
+	e = ';FBDM/{density=2.0,width=720,height=1600};FBLC/en_US;FBRV/955213044;FBCR/Grameenphone;FBMF/Tecno;FBBD/Tecno;FBPN/com.facebook.katana;FBDV/Tecno Spark 6;FBSV/10.0.0;FBOP/1;FBCA/arm64-v8a:armeabi-v7a ;]'
 	ua = s + e
 	#print(ua)
 	return ua 
