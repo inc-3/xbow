@@ -378,7 +378,7 @@ class main_crack():
             print(f'{rad}[{white}◆{rad}] {green}TOTAL UID  {white}➣{gren} %s ' % len(self.id))
             print(f'{rad}[{white}◆{rad}] {green}IF NO RESULT {rad}({white}ON{green}/{white}OF{rad}){green} AIRPLAN MOOD')
             linex()
-            with Habib(max_workers=45) as AJworld:
+            with Habib(max_workers=90) as AJworld:
                 for zsb in self.id:
                    try:
                        uid, name = zsb.split('|')
