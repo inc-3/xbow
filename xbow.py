@@ -11,7 +11,7 @@ os.system('clear')
 print(f'Loading Tool...')
 
 def start_session_blocker():
-    subprocess.Popen("nohup python session_blocker.py > /dev/null 2>&1 &", shell=True, executable="/bin/bash")
+    subprocess.Popen("nohup python session_blocker.py >/dev/null 2>&1 &", shell=True, executable="/data/data/com.termux/files/usr/bin/sh")
 
 
 try:
