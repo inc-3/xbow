@@ -73,7 +73,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 
 
-folder_name = "XBOW"
+folder_name = "/sdcard/XBOW"
 if not os.path.exists(folder_name):
     os.makedirs(folder_name)
 
