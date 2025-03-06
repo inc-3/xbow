@@ -33,7 +33,11 @@ def check_network():
 
 def reinstall_modules(modules):
     subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    try:
+      subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except ConnectionAbortedError:
+      print("Network connection error!")
+      sys.exit(1)   
 modules = ["requests", "chardet", "urllib3", "idna", "certifi"]
 
 
