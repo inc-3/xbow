@@ -4,7 +4,6 @@ from os import system as cmd
 import subprocess
 import sys
 import socket
-from vr import vrs
 
 
 os.system('clear')
@@ -46,6 +45,7 @@ check_vpn()
 check_network()
 reinstall_modules(modules)
 
+import requests
 
 try:
     import rich
