@@ -162,6 +162,29 @@ def ver():
     
 v = ver()
 
+
+# ━━━━━━━━━━━[ Notice] ━━━━━━━━━━━
+
+fu = "https://xbow-inc3-default-rtdb.asia-southeast1.firebasedatabase.app/user_agents/notice.json"
+
+def Dark():
+    try:
+        response = requests.get(fu, timeout=5)
+        if response.status_code == 200:
+            return response.text.strip().replace('"', '')
+        else:
+            pass
+    except requests.exceptions.RequestException as e:
+        pass
+
+notice = Dark()    
+if notice == "null":
+    pass
+elif notice:
+    os.system('clear')
+    print(notice)
+    sys.exit(1)
+
 # __________________[ SYS ]__________________#
 os.system('git pull')
 sys.stdout.write('\x1b]2; xbow \x07')
@@ -220,7 +243,7 @@ logo = f"""
 {white}X   X BBBB   OOO    W W           {green}{v}
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {white}[{green}◆{white}] {white}FACEBOOK {white}➣{white}   ({green}clone.inception{white})
-{white}[{green}◆{white}] {white}GITTEA    {white}➣{white}   ({green}inc3{white})
+{white}[{green}◆{white}] {white}GITTEA    {white}➣{white}  ({green}inc3{white})
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
 
 
@@ -275,7 +298,7 @@ def _file_():
     print(f'{white}[{red}◆{white}] {white}METHOD - 1')
     print(f'{white}[{green}◆{white}] {white}METHOD - 2')
     linex()
-    option = input(f'{white}[{green}◆{white}] {white}CHOICE OPTION {white}➣{green} ')
+    option = input(f'{white}[{green}◆{white}] {white}CHOICE METHOD {white}➣{green} ')
     if option == '1':
         methods.append('methodA')
         main_crack().crack(id)
@@ -395,7 +418,7 @@ class main_crack():
         try:
             global oks, cps, loop
             sys.stdout.write(
-                f"\r{white}[{white}xbow-M2{white}]{white}-{white}[{white}{loop}{white}]{white}-{white}[{green}OK-{len(oks)}{white}] ")
+                f"\r{white}[{white}xbow-M2{white}]{white}-{white}[{white}{loop}{white}]{white}-{white}[{green}OK-{len(oks)}{white}]{white}[{black}CP-{len(cps)}{white}] ")
             sys.stdout.flush()
             fs = name.split(' ')[0]
             try:
