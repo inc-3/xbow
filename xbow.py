@@ -5,6 +5,8 @@ import subprocess
 import sys
 import socket
 
+os.system('pip install psutil')
+
 os.system('clear')
 print(f'\x1b[38;5;46m[\x1b[38;5;160m◆\x1b[38;5;46m] Loading Modules.... ')
 
