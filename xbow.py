@@ -220,7 +220,7 @@ logo = f"""
 {white}X   X BBBB   OOO    W W           {green}{v}
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {white}[{green}◆{white}] {white}FACEBOOK {white}➣{white}   ({green}clone.inception{white})
-{white}[{green}◆{white}] {white}GITHUB    {white}➣{white}   ({gren}xbow-570{white})
+{white}[{green}◆{white}] {white}GITTEA    {white}➣{white}   ({green}inc3{white})
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
 
 
