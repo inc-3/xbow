@@ -12,7 +12,7 @@ print(f'\x1b[38;5;46m[\x1b[38;5;160m◆\x1b[38;5;46m] Loading Modules.... ')
 try:
     import psutil
 except ModuleNotFoundError:
-    subprocess.run([sys.executable, "-m", "pip", "install"] + "psutil", stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run([sys.executable, "-m", "pip", "install"] + psutil, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 def check_vpn():
     """
