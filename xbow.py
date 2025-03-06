@@ -40,7 +40,7 @@ def check_network():
 
 def reinstall_modules(modules):
 
-    subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y"] + modules)
+    subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
