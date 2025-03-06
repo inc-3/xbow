@@ -243,7 +243,7 @@ logo = f"""
 {white}X   X BBBB   OOO    W W           {green}{v}
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {white}[{green}◆{white}] {white}FACEBOOK {white}➣{white}   ({green}clone.inception{white})
-{white}[{green}◆{white}] {white}GITTEA    {white}➣{white}  ({green}inc3{white})
+{white}[{green}◆{white}] {white}GITTEA   {white}➣{white}   ({green}inc3{white})
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
 
 
@@ -287,7 +287,7 @@ def menu():
     elif select == '0':
         exit(f'{green}[{red}+{green}] See you again ')
     else:
-        print(f'{red} INVALID OPTION')
+        print(f'{white}[{red}!{white}] INVALID OPTION')
         time.sleep(1)
         menu()
 
@@ -300,18 +300,16 @@ def _file_():
     linex()
     option = input(f'{white}[{green}◆{white}] {white}CHOICE METHOD {white}➣{green} ')
     if option == '1':
-        methods.append('methodA')
-        main_crack().crack(id)
+        print(f"{white}[{red}!{white}]Method 1 Coming Soon")
+        time.sleep(2)
+        _file_()
     elif option == '2':
         methods.append('methodB')
-        main_crack().crack(id)
-    elif option == '3':
-        methods.append('methodC')
         main_crack().crack(id)
     elif option == '0':
         _file_()
     else:
-        print(f'{green}[{red}+{green}] INVALID OPTION')
+        print(f'{white}[{red}!{white}] INVALID METHOD')
         time.sleep(2)
         _file_()
 
