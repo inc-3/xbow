@@ -71,15 +71,6 @@ import os, platform
 from concurrent.futures import ThreadPoolExecutor
 
 
-
-
-folder_name = "/sdcard/XBOW"
-if not os.path.exists(folder_name):
-    os.makedirs(folder_name)
-
-
-
-
 fast_work = ThreadPoolExecutor(max_workers=15).submit
 # __________________[ LOOP ]__________________#
 totaldmp = 0
@@ -231,6 +222,9 @@ def menu():
     select = input(f'{white}[{green}◆{white}] {white}CHOICE OPTION {white}➣{green} ')
     if select == '1':
         check_vpn()
+        folder_name = "/sdcard/XBOW"
+        if not os.path.exists(folder_name):
+          os.makedirs(folder_name)
         _file_()
     elif select == '2':
         print(f'{red}Not Found{red}')
