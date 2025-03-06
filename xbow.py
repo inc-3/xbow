@@ -5,7 +5,6 @@ import subprocess
 import sys
 import socket
 
-os.system('pip install psutil')
 
 os.system('clear')
 print(f'\x1b[38;5;46m[\x1b[38;5;160m◆\x1b[38;5;46m] Loading Modules.... ')
@@ -13,7 +12,7 @@ print(f'\x1b[38;5;46m[\x1b[38;5;160m◆\x1b[38;5;46m] Loading Modules.... ')
 try:
     import psutil
 except ModuleNotFoundError:
-    os.system('pip install psutil > /dev/null')
+    subprocess.run([sys.executable, "-m", "pip", "install"] + "psutil", stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 def check_vpn():
     """
