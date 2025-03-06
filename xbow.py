@@ -1,25 +1,57 @@
-# __________________[ IMPORT ]__________________#
 import os, zlib
 from os import system as osRUB
 from os import system as cmd
+import subprocess
+import sys
+import socket
 
 os.system('clear')
 print(f'\x1b[38;5;46m[\x1b[38;5;160m◆\x1b[38;5;46m] Loading Modules.... ')
-try:
-    import requests, certifi, rich, pycurl
-except:
-    os.system("pip install requests certifi rich pycurl")
-    import requests, certifi, rich, pycurl
 
 try:
-    import concurrent.futures
-except ImportError:
-    print(f'\x1b[38;5;46m[\x1b[1;97m=\x1b[38;5;46m] INSTALLING FUTURES ')
-    os.system('pip install futures')
-try:
-    import mechanize
+    import psutil
 except ModuleNotFoundError:
-    os.system('pip install mechanize > /dev/null')
+    os.system('pip install psutil > /dev/null')
+
+def check_vpn():
+    """
+    Check if a VPN connection is active.
+    For simplicity, this checks if any VPN interface is active.
+    """
+    # Get the list of all network interfaces
+    vpn_interfaces = ['tun', 'ppp', 'utun']  # Common VPN interface names
+    for interface in psutil.net_if_addrs():
+        if any(vpn in interface.lower() for vpn in vpn_interfaces):
+            print("VPN detected! Exiting script.")
+            sys.exit(1)
+
+def check_network():
+    """
+    Check if there is a valid network connection.
+    """
+    try:
+        # Try to connect to a reliable host (Google's DNS server)
+        socket.create_connection(('8.8.8.8', 53), timeout=5)
+    except (socket.timeout, socket.gaierror, socket.error):
+        print("Network connection error! Exiting script.")
+        sys.exit(1)
+
+
+def reinstall_modules(modules):
+
+    subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+# List of modules to always reinstall
+modules = ["requests", "chardet", "urllib3", "idna", "certifi"]
+
+
+check_vpn()  # Check if VPN is active
+check_network()  # Check for network connection
+
+reinstall_modules(modules)
+
 
 try:
     import rich
