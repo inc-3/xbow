@@ -8,12 +8,11 @@ from vr import vrs
 
 
 os.system('clear')
-print(f'\x1b[38;5;46m[\x1b[38;5;160m◆\x1b[38;5;46m] Loading Modules.... ')
+print(f'Loading Tool...')
 
 try:
     import psutil
 except ModuleNotFoundError:
-    print("psutil not found. Installing...")
     subprocess.run([sys.executable, "-m", "pip", "install", "psutil"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     import psutil
 
@@ -135,11 +134,6 @@ def user_agent():
         sys.exit(1)
     ua = s + e
     return ua
-
-e_value = user_agent()
-print("Fetched E Value:", e_value)
-
-time.sleep(1212)
 
 # ━━━━━━━━━━━[ Version] ━━━━━━━━━━━
 
