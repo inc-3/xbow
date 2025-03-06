@@ -32,11 +32,8 @@ def check_network():
 
 
 def reinstall_modules(modules):
-
     subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
     subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
 modules = ["requests", "chardet", "urllib3", "idna", "certifi"]
 
 
@@ -461,6 +458,7 @@ class main_crack():
         print(f'{white}[{green}◆{white}] {white}TOTAL UID  {white}➣{green} %s ' % len(self.id))
         print(f'{white}[{green}◆{white}] {white}Use Automate {green}1M/3S{green} {white}Airplane Flow')
         linex()
+        reinstall_modules(modules)
         with inc3(max_workers=90) as NOX:
             for zsb in self.id:
                 try:
