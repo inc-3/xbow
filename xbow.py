@@ -4,7 +4,7 @@ from os import system as cmd
 import subprocess
 import sys
 import socket
-from inc3 import vr
+from vr import vr
 
 
 os.system('clear')
