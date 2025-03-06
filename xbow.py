@@ -300,7 +300,7 @@ def _file_():
     linex()
     option = input(f'{white}[{green}◆{white}] {white}CHOICE METHOD {white}➣{green} ')
     if option == '1':
-        print(f"{white}[{red}!{white}]Method 1 Coming Soon")
+        print(f"{white}[{red}!{white}] Method 1 Coming Soon!")
         time.sleep(2)
         _file_()
     elif option == '2':
@@ -512,6 +512,8 @@ class main_crack():
         check_vpn()
         check_network()
         reinstall_modules(modules)
+        check_vpn()
+        check_network()
         with inc3(max_workers=90) as NOX:
             for zsb in self.id:
                 try:
