@@ -44,6 +44,10 @@ modules = ["requests", "chardet", "urllib3", "idna", "certifi"]
 check_vpn()
 check_network()
 reinstall_modules(modules)
+time.sleep(1)
+check_vpn()
+check_network()
+
 
 import requests
 
@@ -130,8 +134,9 @@ def get_ua():
             sys.exit(1)
     except requests.exceptions.RequestException as e:
         sys.exit(1)
-    
+
 e = get_ua()
+
 def user_agent():
     s = "[FBAN/FB4A;FBAV/" + str(random.randint(111, 999)) + '.0.0.' + str(random.randrange(9, 99)) + str(
         random.randint(111, 999)) + ";FBBV/" + str(random.randint(111111111, 999999999))
