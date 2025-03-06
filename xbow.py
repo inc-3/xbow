@@ -35,6 +35,7 @@ def reinstall_modules(modules):
     subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
       subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+      import requests
     except ModuleNotFoundError:
       print("Network connection error!")
       sys.exit(1)   
@@ -61,7 +62,7 @@ def looood(MACHINE):
 
 
 from urllib.request import Request, urlopen
-import os, requests, re, platform, sys, random, subprocess, threading, itertools, base64, uuid, zlib, re, json, uuid, \
+import os, re, platform, sys, random, subprocess, threading, itertools, base64, uuid, zlib, re, json, uuid, \
     subprocess, shutil, webbrowser, time, json, sys, random, datetime, time, re, subprocess, platform, string, json, \
     time, re, random, sys, string, uuid
 from concurrent.futures import ThreadPoolExecutor as inc3
