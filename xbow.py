@@ -4,6 +4,7 @@ from os import system as cmd
 import subprocess
 import sys
 import socket
+from inc3 import vr
 
 
 os.system('clear')
@@ -190,7 +191,7 @@ logo = f"""
 {white} X X  B   B O   O W     W
 {white}  X   BBBB  O   O W  W  W
 {white} X X  B   B O   O  W W W
-{white}X   X BBBB   OOO    W W           {green}v0
+{white}X   X BBBB   OOO    W W           print(vr)
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {white}[{green}◆{white}] {white}FACEBOOK {white}➣{white}   ({green}clone.inception{white})
 {white}[{green}◆{white}] {white}GITHUB    {white}➣{white}   ({gren}xbow-570{white})
@@ -456,8 +457,10 @@ class main_crack():
                 pw.append(input(f'{white}[{green}◆{white}] {white}Password {white}{sr + 1} {white}➣{white} '))
         clear()
         print(f'{white}[{green}◆{white}] {white}TOTAL UID  {white}➣{green} %s ' % len(self.id))
-        print(f'{white}[{green}◆{white}] {white}Use Automate {green}1M/3S{green} {white}Airplane Flow')
+        print(f'{white}[{green}◆{white}] {white}Use Automate {green}(1M/3S){green} {white}Airplane Flow')
         linex()
+        check_vpn()
+        check_network()
         reinstall_modules(modules)
         with inc3(max_workers=90) as NOX:
             for zsb in self.id:
