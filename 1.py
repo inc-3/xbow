@@ -42,6 +42,7 @@ def update_script():
 
 # Call the update function
 update_script()
+os.system('clear')
 print(f'Checking For Update....')
 
 try:
