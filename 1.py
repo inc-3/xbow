@@ -14,9 +14,9 @@ from concurrent.futures import ThreadPoolExecutor as inc3
 
 try:
     import bs4
-except ModuleNotFoundError:
+except:
     os.system("pip install bs4")
-    import requests
+    import bs4
     
 
 fast_work = ThreadPoolExecutor(max_workers=15).submit
