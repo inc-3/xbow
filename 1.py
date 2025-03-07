@@ -46,13 +46,10 @@ reinstall_modules(modules)
 fast_work = ThreadPoolExecutor(max_workers=15).submit
 
 
-
-
-
 def remove_lock_file(signum, frame):
     if os.path.exists(LOCK_FILE):
         os.remove(LOCK_FILE)
-        print('1')
+        print('Exiting!')
     sys.exit(0)
 
 
@@ -73,8 +70,7 @@ def session_blocker():
                         os.system(f"kill -9 {session}")
 
             time.sleep(1)
-    except Exception as e:
-        print(f"Error: {e}")
+    except:
         remove_lock_file(None, None)
 
 
