@@ -436,6 +436,7 @@ class main_crack():
     def pasw(self):
         pw = []
         clear()
+
         try:
             print(f'{white}[{red}◆{white}] {red}Password Limit Should Not Be Greater Than 20!')
             linex()
@@ -443,7 +444,7 @@ class main_crack():
 
             if sl <= 0 or sl > 20:
                 print(f'{red} Password Limit Must Be Between 1 and 20!')
-                return 
+                return
 
             clear()
             print(f'{white}[{green}◆{white}] {white}EXAMPLE {white}➣{white} First123/first12/77889900')
@@ -453,32 +454,45 @@ class main_crack():
                 pw.append(input(f'{white}[{green}◆{white}] {white}Password {white}{sr + 1} {white}➣{white} '))
 
             clear()
-            return pw
-        except ValueError:
-            print(f'{red}❌ Invalid input! Please enter a number between 1 and 20.')
-        print(f'{white}[{green}◆{white}] {white}TOTAL UID  {white}➣{green} %s ' % len(self.id))
-        print(f'{white}[{green}◆{white}] {white}Use Automate {green}1M/3S{green} {white}Airplane Flow')
-        linex()
-        check_vpn()
-        check_network()
-        with inc3(max_workers=90) as NOX:
-            for zsb in self.id:
-                try:
-                    uid, name = zsb.split('|')
-                    sz = name.split(' ')
-                    if len(sz) == 3 or len(sz) == 4 or len(sz) == 5 or len(sz) == 8:
-                        pwx = pw
-                    else:
-                        pwx = pw
+
+            if not self.id:
+                print(f'{red}❌ No UIDs found In File!')
+                return
+
+            print(f'{white}[{green}◆{white}] {white}TOTAL UID  {white}➣{green} %s ' % len(self.id))
+            print(f'{white}[{green}◆{white}] {white}Use Automate {green}1M/3S{green} {white}Airplane Flow')
+            linex()
+
+            check_vpn()
+            check_network()
+
+            with inc3(max_workers=90) as NOX:
+                for zsb in self.id:
+                    try:
+                        uid, name = zsb.split('|')
+                        sz = name.split(' ')
+                        if len(sz) in [3, 4, 5, 8]:
+                            pwx = pw
+                        else:
+                            pwx = pw
+
                         if 'methodA' in methods:
                             NOX.submit(self.methodA, uid, name, pwx)
                         elif 'methodB' in methods:
                             NOX.submit(self.methodB, uid, name, pwx)
                         elif 'methodC' in methods:
                             NOX.submit(self.methodC, uid, name, pwx)
-                except:
-                    pass
-        result(oks, cps)
+                        else:
+                            print(f'{red}❌ No valid methods found for cracking.')
+                            return
+                    except Exception as e:
+                        print(f'{red}❌ Error processing ID {zsb}: {e}')
+                        pass
+
+            result(oks, cps)
+
+        except ValueError:
+            print(f'{red}❌ Invalid input! Please enter a number between 1 and 20.')
 
 
 def main():
