@@ -12,6 +12,18 @@ from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import ThreadPoolExecutor as inc3
 
 
+def update_script():
+    try:
+        # Reset any local changes and force update
+        subprocess.run(["git", "fetch", "--all"], check=True)
+        subprocess.run(["git", "reset", "--hard", "origin/main"], check=True)
+        subprocess.run(["git", "pull", "--force"], check=True)
+        print("✅ Update successful! Restarting script...")
+        os.execv(SCRIPT_PATH, ["python3"] + sys.argv)
+    except Exception as e:
+        print(f"❌ Update failed: {e}")
+
+
 os.system('clear')
 print(f'Getting Modules....')
 
