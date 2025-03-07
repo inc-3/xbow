@@ -19,28 +19,22 @@ LOCK_FILE = "/data/data/com.termux/files/home/.inc3"
 if os.path.exists(LOCK_FILE):
     os.remove(LOCK_FILE)
 
-
-
-
 def update_script():
     try:
-        # Run git pull and capture the output
         result = subprocess.run(["git", "pull"], capture_output=True, text=True)
         if "Already up to date" in result.stdout:
             pass
         else:
-            # Force update to the latest version
             subprocess.run(["git", "fetch", "--all"], check=True)
             subprocess.run(["git", "reset", "--hard", "origin/main"], check=True)
             subprocess.run(["git", "pull", "--force"], check=True)
 
             print("✅ Update successful! Run Again")
-            sys.exit(1)  # Exit to allow manual restart
+            sys.exit(1)
 
     except Exception as e:
         print(f"❌ Update failed: {e}")
 
-# Call the update function
 update_script()
 os.system('clear')
 print(f'Checking For Update....')
@@ -83,7 +77,7 @@ def session_blocker():
     with open(LOCK_FILE, "w") as f:
         f.write(str(current_pid))
 
-    ###print(f"Current session PID is: {current_pid}")
+    ###print(f"{current_pid}")
 
     try:
         while True:
@@ -152,6 +146,25 @@ def clear(): os.system('clear');print(logo)
 def linex(): print(f'{white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ')
 
 
+# __________________[ COLOUR ]__________________#
+A = '\x1b[1;97m';
+R = '\x1b[38;5;196m';
+Y = '\033[1;33m';
+M = '\x1b[38;5;205m';
+B = '\x1b[38;5;8m';
+G1 = '\x1b[38;5;46m';
+G2 = '\x1b[38;5;47m';
+G3 = '\x1b[38;5;48m';
+G4 = '\x1b[38;5;49m';
+G5 = '\x1b[38;5;50m';
+X = '\33[1;34m';
+X1 = '\x1b[38;5;14m';
+X2 = '\x1b[38;5;123m';
+X3 = '\x1b[38;5;122m';
+X4 = '\x1b[38;5;86m';
+X5 = '\x1b[38;5;121m';
+S = '\x1b[1;96m';
+G = '\x1b[38;5;48m'
 orange = "\x1b[38;5;196m"
 yellow = "\x1b[38;5;208m"
 black = "\033[1;30m"
@@ -168,7 +181,6 @@ gren = "\x1b[38;5;154m"
 gas = "\033[1;32m"
 my_color = [white, blue, green];
 warna = random.choice(my_color)
-
 fu = "https://xbow-inc3-default-rtdb.asia-southeast1.firebasedatabase.app/user_agents/e_value.json"
 
 
@@ -437,8 +449,8 @@ class main_crack():
         print(f'{white}[{green}◆{white}] {white}TOTAL UID  {white}➣{green} %s ' % len(self.id))
         print(f'{white}[{green}◆{white}] {white}Use Automate {green}1M/3S{green} {white}Airplane Flow')
         linex()
-        check_vpn()  # Check if VPN is active
-        check_network()  # Check for network connection
+        check_vpn()
+        check_network() 
         with inc3(max_workers=90) as NOX:
             for zsb in self.id:
                 try:
