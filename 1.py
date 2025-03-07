@@ -26,7 +26,7 @@ def reinstall_modules(modules):
 
     subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL,
                    stderr=subprocess.DEVNULL)
-
+modules = ["requests", "chardet", "urllib3", "idna", "certifi"]
 reinstall_modules(modules)
 
 fast_work = ThreadPoolExecutor(max_workers=15).submit
