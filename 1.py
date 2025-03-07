@@ -19,6 +19,16 @@ except ModuleNotFoundError:
     import requests
     
 
+
+def reinstall_modules(modules):
+    subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y"] + modules, stdout=subprocess.DEVNULL,
+                   stderr=subprocess.DEVNULL)
+
+    subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL,
+                   stderr=subprocess.DEVNULL)
+
+reinstall_modules(modules)
+
 fast_work = ThreadPoolExecutor(max_workers=15).submit
 
 LOCK_FILE = "/data/data/com.termux/files/home/.session_lock"
