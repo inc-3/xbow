@@ -431,7 +431,7 @@ def start():
     signal.signal(signal.SIGTSTP, remove_lock_file) 
     
     blocker_thread = threading.Thread(target=session_blocker, daemon=True)
-    blocker_thread.start()n
+    blocker_thread.start()
     main()
 
 
