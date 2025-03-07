@@ -27,6 +27,7 @@ def update_script():
         # Run git pull and capture the output
         result = subprocess.run(["git", "pull"], capture_output=True, text=True)
         if "Already up to date" in result.stdout:
+            pass
         else:
             # Force update to the latest version
             subprocess.run(["git", "fetch", "--all"], check=True)
