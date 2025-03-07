@@ -72,7 +72,7 @@ fast_work = ThreadPoolExecutor(max_workers=15).submit
 def remove_lock_file(signum, frame):
     if os.path.exists(LOCK_FILE):
         os.remove(LOCK_FILE)
-        print('Exiting!1')
+        print('Exiting!')
     sys.exit(0)
 
 
@@ -237,7 +237,7 @@ elif notice:
 
 # __________________[ LOGO. ..]__________________#
 logo = f"""
-{white}X   X BBBB   OOO  W     W1
+{white}X   X BBBB   OOO  W     W
 {white} X X  B   B O   O W     W
 {white}  X   BBBB  O   O W  W  W
 {white} X X  B   B O   O  W W W
