@@ -12,6 +12,9 @@ from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import ThreadPoolExecutor as inc3
 
 
+os.system('clear')
+print(f'Getting Modules....')
+
 try:
     import requests
 except ModuleNotFoundError:
@@ -91,20 +94,8 @@ def check_network():
         print("Network connection error!")
         sys.exit(1)
 
-
-def reinstall_modules(modules):
-    subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    try:
-      subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-      import requests
-    except ModuleNotFoundError:
-      print("Network connection error!")
-      sys.exit(1)   
-modules = ["requests", "chardet", "urllib3", "idna", "certifi"]
-
-
-check_vpn()  # Check if VPN is active
-check_network()  # Check for network connection
+check_vpn()
+check_network()
 
 
 
