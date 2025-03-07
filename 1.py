@@ -229,7 +229,7 @@ elif notice:
 
 # __________________[ LOGO. ..]__________________#
 logo = f"""
-{white}X   X BBBB   OOO  W     W
+{white}X   X BBBB   OOO  W     W1
 {white} X X  B   B O   O W     W
 {white}  X   BBBB  O   O W  W  W
 {white} X X  B   B O   O  W W W
