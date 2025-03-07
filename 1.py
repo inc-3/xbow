@@ -19,9 +19,8 @@ def update_script():
         subprocess.run(["git", "pull", "--force"], check=True)
         print("✅ Update successful! Run Again")
         sys.exit(1)
-    except:
-        print(f"❌ Update failed!")
-        sys.exit(1)
+    except Exception as e:
+        print(f"❌ Update failed: {e}")
 
 update_script()
 
