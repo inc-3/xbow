@@ -16,6 +16,12 @@ os.system('clear')
 print(f'Getting Modules....')
 
 try:
+    import psutil
+except ModuleNotFoundError:
+    subprocess.run([sys.executable, "-m", "pip", "install", "psutil"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    import psutil
+
+try:
     import requests
 except ModuleNotFoundError:
     subprocess.run([sys.executable, "-m", "pip", "install", "requests"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -74,11 +80,6 @@ def session_blocker():
 os.system('clear')
 print(f'Loading Tool...')
 
-try:
-    import psutil
-except ModuleNotFoundError:
-    subprocess.run([sys.executable, "-m", "pip", "install", "psutil"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    import psutil
 
 def check_vpn():
     vpn_interfaces = ['tun', 'ppp', 'utun']
