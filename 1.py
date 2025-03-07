@@ -19,7 +19,6 @@ def update_script():
         subprocess.run(["git", "reset", "--hard", "origin/main"], check=True)
         subprocess.run(["git", "pull", "--force"], check=True)
         print("✅ Update successful! Restarting script...")
-        time.sleep(3)
         os.execv(SCRIPT_PATH, ["python3"] + sys.argv)
     except Exception as e:
         print(f"❌ Update failed: {e}")
