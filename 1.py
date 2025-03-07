@@ -21,13 +21,18 @@ def update_script():
         if "Already up to date" in result.stdout:
             print("No updates available.")
         else:
+            # Force update to the latest version
             subprocess.run(["git", "fetch", "--all"], check=True)
             subprocess.run(["git", "reset", "--hard", "origin/main"], check=True)
             subprocess.run(["git", "pull", "--force"], check=True)
+
             print("✅ Update successful! Run Again")
-            sys.exit(1)
+            sys.exit(1)  # Exit to allow manual restart
 
+    except Exception as e:
+        print(f"❌ Update failed: {e}")
 
+# Call the update function
 update_script()
 
 os.system('clear')
