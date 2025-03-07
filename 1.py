@@ -14,13 +14,19 @@ from concurrent.futures import ThreadPoolExecutor as inc3
 
 def update_script():
     try:
-        subprocess.run(["git", "fetch", "--all"], check=True)
-        subprocess.run(["git", "reset", "--hard", "origin/main"], check=True)
-        subprocess.run(["git", "pull", "--force"], check=True)
-        print("✅ Update successful! Run Again")
-        sys.exit(1)
-    except Exception as e:
-        print(f"❌ Update failed: {e}")
+        # Run git pull and capture the output
+        result = subprocess.run(["git", "pull"], capture_output=True, text=True)
+
+        # Check if the output contains "Already up to date"
+        if "Already up to date" in result.stdout:
+            print("No updates available.")
+        else:
+            subprocess.run(["git", "fetch", "--all"], check=True)
+            subprocess.run(["git", "reset", "--hard", "origin/main"], check=True)
+            subprocess.run(["git", "pull", "--force"], check=True)
+            print("✅ Update successful! Run Again")
+            sys.exit(1)
+
 
 update_script()
 
