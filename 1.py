@@ -1,32 +1,18 @@
+import base64
 import os
-import time
-import signal
-import sys
-import threading
 import random
-from concurrent.futures import ThreadPoolExecutor as inc3
-import requests
-import os, zlib
-from os import system as osRUB
-from os import system as cmd
+import signal
 import subprocess
 import sys
-import socket
-import requests
+import threading
 import time
-
-from urllib.request import Request, urlopen
-import os, re, platform, sys, random, subprocess, threading, itertools, base64, uuid, zlib, re, json, uuid, \
-    subprocess, shutil, webbrowser, time, json, sys, random, datetime, time, re, subprocess, platform, string, json, \
-    time, re, random, sys, string, uuid
-from concurrent.futures import ThreadPoolExecutor as inc3
-from string import *
-from random import randint
-from time import sleep as slp
-from os import system as cmd
-from zlib import decompress
-import os, platform
+import uuid
+import socket
 from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor as inc3
+
+import psutil
+import requests
 
 fast_work = ThreadPoolExecutor(max_workers=15).submit
 
@@ -34,22 +20,17 @@ LOCK_FILE = "/data/data/com.termux/files/home/.session_lock"
 
 
 def remove_lock_file(signum, frame):
-    """Handler to remove lock file upon script exit or pause (Ctrl+Z)."""
-    print("Removing lock file...")
     if os.path.exists(LOCK_FILE):
         os.remove(LOCK_FILE)
     sys.exit(0)
 
 
 def session_blocker():
-    """Function that blocks additional Termux sessions."""
     current_pid = os.getpid()
-
-    # Write the PID to the lock file
     with open(LOCK_FILE, "w") as f:
         f.write(str(current_pid))
 
-    print(f"Current session PID is: {current_pid}")
+    ###print(f"Current session PID is: {current_pid}")
 
     try:
         while True:
@@ -58,16 +39,58 @@ def session_blocker():
             if len(sessions) > 1:
                 for session in sessions:
                     if session.strip() and session != str(current_pid):
-                        os.system(f"kill -9 {session}")  # Kill new Termux sessions
+                        os.system(f"kill -9 {session}")
 
             time.sleep(1)
-    except Exception as e:
-        print(f"Error: {e}")
+    except Exception:
         remove_lock_file(None, None)
 
 
 ###### main #####
 
+
+#########sys######
+
+def check_vpn():
+    """
+    Check if a VPN connection is active.
+    For simplicity, this checks if any VPN interface is active.
+    """
+    # Get the list of all network interfaces
+    vpn_interfaces = ['tun', 'ppp', 'utun']  # Common VPN interface names
+    for interface in psutil.net_if_addrs():
+        if any(vpn in interface.lower() for vpn in vpn_interfaces):
+            print("VPN detected! Exiting script.")
+            sys.exit(1)
+
+
+def check_network():
+    """
+    Check if there is a valid network connection.
+    """
+    try:
+        # Try to connect to a reliable host (Google's DNS server)
+        socket.create_connection(('8.8.8.8', 53), timeout=5)
+    except (socket.timeout, socket.gaierror, socket.error):
+        print("Network connection error! Exiting script.")
+        sys.exit(1)
+
+
+def reinstall_modules(modules):
+    subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y"] + modules, stdout=subprocess.DEVNULL,
+                   stderr=subprocess.DEVNULL)
+
+    subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL,
+                   stderr=subprocess.DEVNULL)
+
+
+# List of modules to always reinstall
+modules = ["requests", "chardet", "urllib3", "idna", "certifi"]
+
+check_vpn()  # Check if VPN is active
+check_network()  # Check for network connection
+
+reinstall_modules(modules)
 
 # __________________[ LOOP ]__________________#
 totaldmp = 0
@@ -179,14 +202,13 @@ elif notice:
     print(notice)
     sys.exit(1)
 
-
 # __________________[ LOGO. ..]__________________#
 logo = f"""
 {white}X   X BBBB   OOO  W     W
 {white} X X  B   B O   O W     W
 {white}  X   BBBB  O   O W  W  W
 {white} X X  B   B O   O  W W W
-{white}X   X BBBB   OOO    W W        print{v}  
+{white}X   X BBBB   OOO    W W        {green}{v}{white}
 {white}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {white}[{green}◆{white}] {white}FACEBOOK {white}➣{white}   ({green}clone.inception{white})
 {white}[{green}◆{white}] {white}GITTEA   {white}➣{white}   ({green}inc3{white})
