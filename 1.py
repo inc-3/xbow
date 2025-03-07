@@ -14,10 +14,10 @@ import requests
 
 
 try:
-    import bs4
-except:
-    os.system("pip install bs4")
-    import bs4
+    import requests
+except ModuleNotFoundError:
+    subprocess.run([sys.executable, "-m", "pip", "install", "requests"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    import requests
     
 
 fast_work = ThreadPoolExecutor(max_workers=15).submit
