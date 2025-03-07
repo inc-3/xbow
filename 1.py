@@ -402,6 +402,8 @@ class main_crack():
         print(f'{white}[{green}◆{white}] {white}TOTAL UID  {white}➣{green} %s ' % len(self.id))
         print(f'{white}[{green}◆{white}] {white}Use Automate {green}1M/3S{green} {white}Airplane Flow')
         linex()
+        check_vpn()  # Check if VPN is active
+        check_network()  # Check for network connection
         with inc3(max_workers=90) as NOX:
             for zsb in self.id:
                 try:
