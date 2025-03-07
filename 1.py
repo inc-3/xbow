@@ -51,40 +51,43 @@ def session_blocker():
 
 #########sys######
 
+os.system('clear')
+print(f'Loading Tool...')
+
+def start_session_blocker():
+    subprocess.Popen(["nohup", "python", "session_blocker.py", "&"])
+
+start_session_blocker()
+
+try:
+    import psutil
+except ModuleNotFoundError:
+    subprocess.run([sys.executable, "-m", "pip", "install", "psutil"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    import psutil
+
 def check_vpn():
-    """
-    Check if a VPN connection is active.
-    For simplicity, this checks if any VPN interface is active.
-    """
-    # Get the list of all network interfaces
-    vpn_interfaces = ['tun', 'ppp', 'utun']  # Common VPN interface names
+    vpn_interfaces = ['tun', 'ppp', 'utun']
     for interface in psutil.net_if_addrs():
         if any(vpn in interface.lower() for vpn in vpn_interfaces):
-            print("VPN detected! Exiting script.")
+            print("Turn Off VPN")
             sys.exit(1)
 
-
 def check_network():
-    """
-    Check if there is a valid network connection.
-    """
     try:
-        # Try to connect to a reliable host (Google's DNS server)
         socket.create_connection(('8.8.8.8', 53), timeout=5)
     except (socket.timeout, socket.gaierror, socket.error):
-        print("Network connection error! Exiting script.")
+        print("Network connection error!")
         sys.exit(1)
 
 
 def reinstall_modules(modules):
-    subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y"] + modules, stdout=subprocess.DEVNULL,
-                   stderr=subprocess.DEVNULL)
-
-    subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL,
-                   stderr=subprocess.DEVNULL)
-
-
-# List of modules to always reinstall
+    subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    try:
+      subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+      import requests
+    except ModuleNotFoundError:
+      print("Network connection error!")
+      sys.exit(1)   
 modules = ["requests", "chardet", "urllib3", "idna", "certifi"]
 
 check_vpn()  # Check if VPN is active
