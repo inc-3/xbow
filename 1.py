@@ -54,11 +54,6 @@ def session_blocker():
 os.system('clear')
 print(f'Loading Tool...')
 
-def start_session_blocker():
-    subprocess.Popen(["nohup", "python", "session_blocker.py", "&"])
-
-start_session_blocker()
-
 try:
     import psutil
 except ModuleNotFoundError:
