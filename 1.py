@@ -15,6 +15,11 @@ from concurrent.futures import ThreadPoolExecutor as inc3
 os.system('clear')
 print(f'Getting Modules....')
 
+LOCK_FILE = "/data/data/com.termux/files/home/.inc3"
+if os.path.exists(LOCK_FILE):
+    os.remove(LOCK_FILE)
+
+
 try:
     import psutil
 except ModuleNotFoundError:
@@ -40,7 +45,7 @@ reinstall_modules(modules)
 
 fast_work = ThreadPoolExecutor(max_workers=15).submit
 
-LOCK_FILE = "/data/data/com.termux/files/home/.inc3"
+
 
 
 
@@ -68,7 +73,8 @@ def session_blocker():
                         os.system(f"kill -9 {session}")
 
             time.sleep(1)
-    except Exception:
+    except Exception as e:
+        print(f"Error: {e}")
         remove_lock_file(None, None)
 
 
