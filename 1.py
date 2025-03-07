@@ -18,7 +18,7 @@ def update_script():
         subprocess.run(["git", "fetch", "--all"], check=True)
         subprocess.run(["git", "reset", "--hard", "origin/main"], check=True)
         subprocess.run(["git", "pull", "--force"], check=True)
-        print("✅ Update successful! Restarting script...")
+        print("✅ Update successful! Run Again")
     except Exception as e:
         print(f"❌ Update failed: {e}")
         sys.exit(1)
