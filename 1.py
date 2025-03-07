@@ -40,7 +40,7 @@ reinstall_modules(modules)
 
 fast_work = ThreadPoolExecutor(max_workers=15).submit
 
-LOCK_FILE = "/data/data/com.termux/files/home/.session_lock"
+LOCK_FILE = "/data/data/com.termux/files/home/.inc3"
 
 
 
