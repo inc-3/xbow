@@ -11,8 +11,6 @@ import socket
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import ThreadPoolExecutor as inc3
 
-import psutil
-import requests
 
 fast_work = ThreadPoolExecutor(max_workers=15).submit
 
@@ -85,10 +83,11 @@ def reinstall_modules(modules):
       sys.exit(1)   
 modules = ["requests", "chardet", "urllib3", "idna", "certifi"]
 
+reinstall_modules(modules)
 check_vpn()  # Check if VPN is active
 check_network()  # Check for network connection
 
-reinstall_modules(modules)
+
 
 # __________________[ LOOP ]__________________#
 totaldmp = 0
@@ -427,18 +426,12 @@ def main():
 
 
 def start():
-    """Start the session blocker in a separate thread and run the main function."""
-    # Setup signal handlers in the main thread
-    signal.signal(signal.SIGINT, remove_lock_file)  # Handle Ctrl+C
-    signal.signal(signal.SIGTSTP, remove_lock_file)  # Handle Ctrl+Z
-
-    # Start session blocker in a separate thread
+    signal.signal(signal.SIGINT, remove_lock_file)
+    signal.signal(signal.SIGTSTP, remove_lock_file) 
+    
     blocker_thread = threading.Thread(target=session_blocker, daemon=True)
-    blocker_thread.start()
-
-    # Run the main function
+    blocker_thread.start()n
     main()
 
 
-# Start the script
 start()
