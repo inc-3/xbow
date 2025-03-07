@@ -13,9 +13,9 @@ from concurrent.futures import ThreadPoolExecutor as inc3
 
 
 try:
-    import requests
+    import bs4
 except ModuleNotFoundError:
-    os.system(f"nohup {sys.executable} -m pip install requests > /dev/null 2>&1 &")
+    os.system("pip install bs4")
     import requests
     
 
