@@ -11,6 +11,16 @@ import socket
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import ThreadPoolExecutor as inc3
 
+os.system('clear')
+print(f'Getting Modules....')
+
+
+LOCK_FILE = "/data/data/com.termux/files/home/.inc3"
+if os.path.exists(LOCK_FILE):
+    os.remove(LOCK_FILE)
+
+
+
 
 def update_script():
     try:
@@ -34,14 +44,7 @@ def update_script():
 
 # Call the update function
 update_script()
-
-os.system('clear')
-print(f'Getting Modules....')
-
-LOCK_FILE = "/data/data/com.termux/files/home/.inc3"
-if os.path.exists(LOCK_FILE):
-    os.remove(LOCK_FILE)
-
+print(f'Checking For Update....')
 
 try:
     import psutil
