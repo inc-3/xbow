@@ -16,13 +16,11 @@ fast_work = ThreadPoolExecutor(max_workers=15).submit
 
 LOCK_FILE = "/data/data/com.termux/files/home/.session_lock"
 
-if os.path.exists(LOCK_FILE):
-os.remove(LOCK_FILE)
-print('1')
 
 def remove_lock_file(signum, frame):
     if os.path.exists(LOCK_FILE):
         os.remove(LOCK_FILE)
+        print('1')
     sys.exit(0)
 
 
