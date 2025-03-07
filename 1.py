@@ -62,7 +62,7 @@ fast_work = ThreadPoolExecutor(max_workers=15).submit
 def remove_lock_file(signum, frame):
     if os.path.exists(LOCK_FILE):
         os.remove(LOCK_FILE)
-        print('Exiting!')
+        print('Exiting!1')
     sys.exit(0)
 
 
