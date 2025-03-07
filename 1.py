@@ -14,10 +14,10 @@ from concurrent.futures import ThreadPoolExecutor as inc3
 os.system('clear')
 print(f'Getting Modules....')
 
-
 LOCK_FILE = "/data/data/com.termux/files/home/.inc3"
 if os.path.exists(LOCK_FILE):
     os.remove(LOCK_FILE)
+
 
 def update_script():
     try:
@@ -35,6 +35,7 @@ def update_script():
     except Exception as e:
         print(f"❌ Update failed: {e}")
 
+
 update_script()
 os.system('clear')
 print(f'Checking For Update....')
@@ -42,15 +43,16 @@ print(f'Checking For Update....')
 try:
     import psutil
 except ModuleNotFoundError:
-    subprocess.run([sys.executable, "-m", "pip", "install", "psutil"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run([sys.executable, "-m", "pip", "install", "psutil"], stdout=subprocess.DEVNULL,
+                   stderr=subprocess.DEVNULL)
     import psutil
 
 try:
     import requests
 except ModuleNotFoundError:
-    subprocess.run([sys.executable, "-m", "pip", "install", "requests"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run([sys.executable, "-m", "pip", "install", "requests"], stdout=subprocess.DEVNULL,
+                   stderr=subprocess.DEVNULL)
     import requests
-    
 
 
 def reinstall_modules(modules):
@@ -59,6 +61,8 @@ def reinstall_modules(modules):
 
     subprocess.run([sys.executable, "-m", "pip", "install"] + modules, stdout=subprocess.DEVNULL,
                    stderr=subprocess.DEVNULL)
+
+
 modules = ["requests", "chardet", "urllib3", "idna", "certifi"]
 reinstall_modules(modules)
 
@@ -109,6 +113,7 @@ def check_vpn():
             print("Turn Off VPN")
             sys.exit(1)
 
+
 def check_network():
     try:
         socket.create_connection(('8.8.8.8', 53), timeout=5)
@@ -116,10 +121,9 @@ def check_network():
         print("Network connection error!")
         sys.exit(1)
 
+
 check_vpn()
 check_network()
-
-
 
 # __________________[ LOOP ]__________________#
 totaldmp = 0
@@ -432,25 +436,31 @@ class main_crack():
     def pasw(self):
         pw = []
         clear()
-        print(f'{white}[{red}◆{white}] {red}Password Limit Should Be Not Greater Than 20!');
-        linex()
-        sl = int(input(f'{white}[{green}◆{white}] {white}Input Password Limit {white}➣{white} '))
-        clear()
-        print(f'{white}[{green}◆{white}] {white}EXAMPLE {white}➣{white} First123/first12/77889900')
-        linex()
-        if sl == '':
-            print(f'{S}[{R}={G5}]{S} PUT LIMIT BETWEEN 1 TO 20')
-        elif sl > 20:
-            print(f'{G5}[{R}={G5}]{S} Password Limit Should Be Not Greater Than 20!')
-        else:
+        try:
+            print(f'{white}[{red}◆{white}] {red}Password Limit Should Not Be Greater Than 20!')
+            linex()
+            sl = int(input(f'{white}[{green}◆{white}] {white}Input Password Limit {white}➣{white} '))
+
+            if sl <= 0 or sl > 20:
+                print(f'{red} Password Limit Must Be Between 1 and 20!')
+                return 
+
+            clear()
+            print(f'{white}[{green}◆{white}] {white}EXAMPLE {white}➣{white} First123/first12/77889900')
+            linex()
+
             for sr in range(sl):
                 pw.append(input(f'{white}[{green}◆{white}] {white}Password {white}{sr + 1} {white}➣{white} '))
-        clear()
+
+            clear()
+            return pw
+        except ValueError:
+            print(f'{red}❌ Invalid input! Please enter a number between 1 and 20.')
         print(f'{white}[{green}◆{white}] {white}TOTAL UID  {white}➣{green} %s ' % len(self.id))
         print(f'{white}[{green}◆{white}] {white}Use Automate {green}1M/3S{green} {white}Airplane Flow')
         linex()
         check_vpn()
-        check_network() 
+        check_network()
         with inc3(max_workers=90) as NOX:
             for zsb in self.id:
                 try:
@@ -477,8 +487,8 @@ def main():
 
 def start():
     signal.signal(signal.SIGINT, remove_lock_file)
-    signal.signal(signal.SIGTSTP, remove_lock_file) 
-    
+    signal.signal(signal.SIGTSTP, remove_lock_file)
+
     blocker_thread = threading.Thread(target=session_blocker, daemon=True)
     blocker_thread.start()
     main()
