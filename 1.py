@@ -23,6 +23,7 @@ def update_script():
     except Exception as e:
         print(f"❌ Update failed: {e}")
 
+update_script()
 
 os.system('clear')
 print(f'Getting Modules....')
