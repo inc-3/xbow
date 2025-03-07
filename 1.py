@@ -85,7 +85,7 @@ def reinstall_modules(modules):
       sys.exit(1)   
 modules = ["requests", "chardet", "urllib3", "idna", "certifi"]
 
-reinstall_modules(modules)
+
 check_vpn()  # Check if VPN is active
 check_network()  # Check for network connection
 
