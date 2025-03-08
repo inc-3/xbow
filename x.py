@@ -142,7 +142,7 @@ def S2():
     fbcr = "random.choice(['o2 - de', 'Verizon - us', 'Vodafone - uk','null','en_GB','en_US','en_PK','IND airtel','Nepal Telecom'])}"
     s = "[FBAN/FB4A;FBAV/" + str(random.randint(111, 999)) + '.0.0.' + str(random.randrange(9, 99)) + str(
         random.randint(111, 999)) + ";FBBV/" + str(random.randint(111111111, 999999999))
-    e = ';FBDM/{density=2.25,width=1080,height=2280};FBLC/en_US;FBRV/920209041;FBCR/Grameenphone;FBMF/LG;FBBD/LG;FBPN/com.facebook.katana;FBDV/LG G8 ThinQ;FBSV/9.0.0;FBOP/1;FBCA/arm64-v8a:armeabi-v7a ;]'
+    e = ';FBDM/{density=3.0,width=1080,height=2400};FBLC/en_US;FBRV/920208041;FBCR/Grameenphone;FBMF/Vivo;FBBD/Vivo;FBPN/com.facebook.katana;FBDV/Vivo Y51;FBSV/10.0.0;FBOP/1;FBCA/arm64-v8a:armeabi-v7a;]'
     ua = s + e
     # print(ua)
     return ua
