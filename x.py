@@ -153,7 +153,6 @@ def linex(): print(f'{white}━━━━━━━━━━━━━━━━━�
 
 
 # __________________[ SYS ]__________________#
-os.system('git pull')
 sys.stdout.write('\x1b]2; xbow \x07')
 head = {'Host': 'adsmanager.facebook.com', 'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
         'viewport-width': '980'}
