@@ -31,6 +31,7 @@ def update_script():
 
     except Exception as e:
         print(f"❌ Update failed! {e}")
+        sys.exit(1)
 
 
 os.system('clear')
