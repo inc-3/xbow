@@ -122,9 +122,6 @@ def check_network():
         sys.exit(1)
 
 
-check_vpn()
-check_network()
-
 # __________________[ LOOP ]__________________#
 totaldmp = 0
 count = 0
@@ -581,8 +578,7 @@ class main_crack():
             print(f'{white}[{green}◆{white}] {white}Use Automate {green}1M/3S{green} {white}Airplane Flow')
             linex()
 
-            check_vpn()
-            check_network()
+            
 
             with inc3(max_workers=speed) as NOX:
                 for zsb in self.id:
