@@ -557,8 +557,8 @@ class main_crack():
             linex()
             sl = int(input(f'{white}[{green}◆{white}] {white}Input Password Limit {white}➣{white} '))
 
-            if sl <= 0 or sl > 20:
-                print(f'{red} Password Limit Must Be Between 1 and 20!')
+            if sl <= 0 or sl > 30:
+                print(f'{red} Password Limit Must Be Between 1 and 30!')
                 return
 
             clear()
